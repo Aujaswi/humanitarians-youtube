@@ -25,6 +25,8 @@ would be a documented re-voice decision, not a per-episode default.
 | 2026-09-04 | `2026-09-04-chapter-1-review/` | Project update |
 | 2026-09-08 | `2026-09-08-the-target-that-moved/` | STEM/AI explainer |
 | 2026-09-08 | `2026-09-08-chapter-2-review/` | Project update |
+| 2026-09-14 | `2026-09-14-further-but-better/` | STEM/AI explainer |
+| 2026-09-14 | `2026-09-14-chapter-23-review/` | Project update |
 
 Rendered MP4 and MP3 are intentionally not committed; the 4K masters live on the
 shared Google Drive and each report's README links to its folder.
