@@ -44,22 +44,36 @@ specified `af_bella` on the strength of Week 19's `SCRIPT.md` header, while Week
 the beat sheet is the record**, per this section's own instruction; a header is
 not.
 
+**Documented exception, 2026-09-13 — `am_onyx` for both Week 22 films.** Same
+reasoning as Week 21, and now the third consecutive week to take it: the topic
+video is narration over a measurement, and the work video ships the same week
+with the same presenter named aloud, so both carry the same timbre. Recorded as
+an exception rather than quietly assumed, because this section is the record.
+
+Three weeks running makes this worth flagging rather than logging a fourth time:
+**`af_bella` is still written here as the standing choice, but `am_onyx` is what
+has actually shipped since 2026-08-30.** If the next episode uses Onyx too, the
+honest move is to change the standing choice and log `af_bella` as the exception
+— not to keep adding exceptions to a default that no longer describes the work.
+
 ## Episodes
 
 | Week reported | Folder | Subject |
 |---|---|---|
-| 2026-07-28 | [`2026-07-28 case-study-video`](./2026-07-28%20case-study-video/) | CommBank — untangling two conflated AI systems |
-| 2026-07-29 | [`2026-07-29 AI Crossroads - Build or Buy Video - Klarna`](./2026-07-29%20AI%20Crossroads%20-%20Build%20or%20Buy%20Video%20-%20Klarna/) | Klarna — build-or-buy, read through the Productivity J-Curve |
+| 2026-07-28 | [`2026-07-28-case-study-video`](./2026-07-28-case-study-video/) | CommBank — untangling two conflated AI systems |
+| 2026-07-29 | [`2026-07-29-ai-crossroads-build-or-buy-video-klarna`](./2026-07-29-ai-crossroads-build-or-buy-video-klarna/) | Klarna — build-or-buy, read through the Productivity J-Curve |
 | 2026-08-05 | [`2026-08-05-lemonade-claims-bot-mycroft`](./2026-08-05-lemonade-claims-bot-mycroft/) | Lemonade — building the claims workflow, and what production would demand |
 | 2026-08-06 | [`2026-08-06-can-ai-catch-its-own-mistakes`](./2026-08-06-can-ai-catch-its-own-mistakes/) | Self-verification — testing a repo topic's claim, and finding it doesn't hold |
-| 2026-08-12 | [`2026-08-12 bs-01-pick-and-scope`](./2026-08-12%20bs-01-pick-and-scope/) | Job descriptions — four questions that make a generic one specific enough for AI |
-| 2026-08-13 | [`2026-08-13 hsbc-agentic-adjacent-ai-mycroft`](./2026-08-13%20hsbc-agentic-adjacent-ai-mycroft/) | HSBC — reading an AI announcement without adding to it |
+| 2026-08-12 | [`2026-08-12-bs-01-pick-and-scope`](./2026-08-12-bs-01-pick-and-scope/) | Job descriptions — four questions that make a generic one specific enough for AI |
+| 2026-08-13 | [`2026-08-13-hsbc-agentic-adjacent-ai-mycroft`](./2026-08-13-hsbc-agentic-adjacent-ai-mycroft/) | HSBC — reading an AI announcement without adding to it |
 | 2026-08-23 | [`2026-08-23-the-ai-was-right`](./2026-08-23-the-ai-was-right/) | DBS — a true claim, and the inference it invites |
 | 2026-08-23 | [`2026-08-23-where-the-record-stops`](./2026-08-23-where-the-record-stops/) | DBS credit-memo — labelling a build CONFIRMED, CONSTRUCTED or BLANK |
 | 2026-08-30 | [`2026-08-30-a-quantum-sphere-stem-video`](./2026-08-30-a-quantum-sphere-stem-video/) | A quantum sphere is never the size it looks — the cross section that refuses to be classical |
 | 2026-08-30 | [`2026-08-30-drafts-one-thing-files-another-mycroft`](./2026-08-30-drafts-one-thing-files-another-mycroft/) | Morgan Stanley — the distinction a review pass surfaced, and the one line that keeps it |
 | 2026-09-03 | [`2026-09-03-the-cell-next-door-stem-video`](./2026-09-03-the-cell-next-door-stem-video/) | The cell next door — a survival number, its own fact-check, and both of them wrong |
 | 2026-09-03 | [`2026-09-03-the-stages-that-stayed-dark-mycroft`](./2026-09-03-the-stages-that-stayed-dark-mycroft/) | Zurich/Clara — move one line, and 27 of 28 tests still pass |
+| 2026-09-13 | [`2026-09-13-two-per-second-stem-video`](./2026-09-13-two-per-second-stem-video/) | Three witnesses to two per second — three fields agree, and one only ever said "in English" |
+| 2026-09-13 | [`2026-09-13-what-had-to-be-invented-mycroft`](./2026-09-13-what-had-to-be-invented-mycroft/) | Capital One — five stages, and the three honest moves when the record runs out |
 
 ## Two lanes
 
