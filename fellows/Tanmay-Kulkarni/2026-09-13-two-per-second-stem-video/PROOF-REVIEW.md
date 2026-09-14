@@ -217,3 +217,49 @@ YouTube attenuates loud material and does not boost quiet material, so the only 
 is that the week plays ~1.4 dB softer than Week 21's uploads.
 
 **Verdict unchanged: clear-for-public, teaching 12/12, production gate PASS.**
+
+---
+
+## Review 8 — the beat chrome should never have shipped
+
+**Tanmay watched the delivered master and found beat identifiers on screen.** Every frame
+carried its beat id and act label in the top-left — `B11 WITNESS THREE — friction` — with a
+hairline under them. Production chrome, drawn for whoever is building the film, rendered into
+a master meant for an audience.
+
+**Week 21's cuts carry none of it.** Cropping the top of a Week 21 frame shows content at the
+frame edge and nothing else. This was a regression introduced by the `chrome()` method I
+wrote for this week's `scenes.py`, not a house convention.
+
+### Why seven reviews missed it
+
+Review 6 removed seven leaked stage directions from these same frames and reasoned explicitly
+that a caption describing the frame to its own builder is not evidence. The beat id and the
+act label are that exact category, drawn by that exact method, one line above the notes that
+were removed — and they were not questioned.
+
+The production gate asks whether evidence is legible and sourced at the moment of assertion.
+It does not ask **whether everything on the frame is meant for the viewer at all**, and
+neither did I. Six passes scored these frames without that question being posed once.
+
+The check that would have caught it costs about ten seconds: crop the top strip of a
+previously shipped master and compare.
+
+### Fixed
+
+`chrome()` in all four scene files now draws only the title and, where the film promises one,
+the corner card. Every beat id, act label and rule is gone. All 48 clips re-rendered, all four
+cuts recompiled through the lossless chain and re-normalised.
+
+Verified by cropping the top 14% of a frame from each of the four cuts rather than assuming
+the edit took: what remains is a title or the corner card, nothing else.
+
+**The corner card stays deliberately.** B02 promises it aloud, it lights per stage, and the
+`reusable rubric` score depends on it being visible. It is viewer-facing content; the beat ids
+were not.
+
+Durations are unchanged, so captions and chapters remain valid — masters still end exactly on
+their final cue.
+
+**Verdict unchanged: clear-for-public, teaching 12/12, production gate PASS.** The gate now
+passes on frames that carry nothing but the film.
