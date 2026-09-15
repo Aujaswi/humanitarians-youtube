@@ -142,3 +142,19 @@ matching layout when the text engines differ, so both must be looked at.
 One manim trap recorded while fixing B13: passing `""` as an axis label builds an empty
 `Text`, which raises `IndexError: too many indices for array` from deep inside the renderer
 with no hint at the cause. `axes()` now skips empty labels.
+
+
+---
+
+## Seventh pass — the chrome itself
+
+Every previz and manim frame this week carried a beat id and act label in the top-left,
+drawn by `chrome()`. Those exist to tell a builder which beat they are looking at. They have
+no place in a shipped master, and Week 21's cuts do not have them.
+
+This QC record is where it should have been caught. Six passes here checked collisions,
+clipping, band positions, safe areas and accent law — all questions about whether the frame's
+content is correct. None asked **which of these elements is content at all.**
+
+Add that question to this file's standing checklist: for each element on the frame, who is it
+for? If the answer is "whoever is building this", it does not ship.

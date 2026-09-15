@@ -256,3 +256,25 @@ are documented boundaries. That framing is the film's subject and it survives in
 metadata intact.
 
 **Verdict: clear-for-public. Teaching 12/12. Production gate PASS.**
+
+
+---
+
+## Review 4 — beat chrome removed
+
+The delivered master carried beat identifiers on screen — `B06 STAGE THREE — validate` in the
+top-left of every frame, with a hairline under it. Production chrome, not content, and Week 21's
+cuts carry none of it. Introduced by the `chrome()` method in this week's `scenes.py`.
+
+Three reviews of this film and six of the topic film scored these frames for legibility and
+sourcing. None asked whether everything on the frame was meant for the viewer — which is the
+question that catches this in one look at a previously shipped master.
+
+`chrome()` now draws only the title and the three-move corner card. All 16 beats re-rendered,
+the master recompiled and re-normalised, and the top strip of a frame checked directly rather
+than assumed. The corner card stays: B02 promises it and the rubric depends on it being
+visible.
+
+Durations unchanged, so captions and chapters remain valid.
+
+**Verdict unchanged: clear-for-public, teaching 12/12, production gate PASS.**

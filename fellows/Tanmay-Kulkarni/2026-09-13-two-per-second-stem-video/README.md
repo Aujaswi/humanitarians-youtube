@@ -3,7 +3,8 @@
 Tanmay Kulkarni, in for Humanitarians AI · Week 22 topic video · built 2026-09-13
 
 Text and code only. **The two masters live in the shared Google Drive**, not in this
-repository — see the links below. The working folder and the full build record are outside
+repository — see the links below. Re-uploaded 2026-09-14 after a fix that removed beat
+identifiers from the frames; any earlier copy of these links is superseded. The working folder and the full build record are outside
 this repo.
 
 ---
@@ -12,8 +13,8 @@ this repo.
 
 | Cut | Aspect | Link |
 |---|---|---|
-| **Long** | 16:9 | <!-- VIDEO_LINK_LONG --> [Watch on Drive](https://drive.google.com/file/d/1yjZW2HKOAIWEkNOIIf6q7Xrtw1vBs5Kp/view?usp=drive_link) |
-| **Short** | 9:16 | <!-- VIDEO_LINK_SHORT --> [Watch on Drive](https://drive.google.com/file/d/1aYqTLXQd-E2Ik5Na6-HY4ri_ke1ZAws7/view?usp=drive_link) |
+| **Long** | 16:9 | <!-- VIDEO_LINK_LONG --> [Watch on Drive](https://drive.google.com/file/d/19640HA6aiCQSO2F89DX2D2-8O7MxL_u5/view?usp=drive_link) |
+| **Short** | 9:16 | <!-- VIDEO_LINK_SHORT --> [Watch on Drive](https://drive.google.com/file/d/12n88Uqk23AdtJv7bNmo9xKFCkH3nFIXU/view?usp=drive_link) |
 
 ## The two cuts
 
