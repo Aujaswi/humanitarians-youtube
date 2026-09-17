@@ -9,12 +9,12 @@ and diagram on a fixed frame, four colours, hard cuts only.
 |---|---|
 | **Runtime** | 3:48.86 (16:9) · 2:40.04 (9:16 short) |
 | **Format** | 3840×2160 and 2160×3840, 24 fps, h264, yuv420p, bt709 |
-| **Voice** | Kokoro `am_onyx` — local, free, no API |
+| **Voice** | Kokoro `am_onyx` — local, free, no API · **predates the 2026-09-17 re-voice** |
 | **Beats** | 10 · 9 script scenes + spoken intro · **no slates**, 10/10 filled |
 | **Presenter** | Chaitanya Malepati |
 | **Series** | Medhavy research log |
 | **Built with** | [brutalist.art](https://github.com/nikbearbrown/brutalist.art), used read-only |
-| **Status** | Built · QC'd · fact-checked · **not published** |
+| **Status** | Built · QC'd · fact-checked · GATE P signed 2026-09-17 · **not published** |
 
 ## Through-line
 
@@ -197,7 +197,8 @@ README.md                this file
 SHOTLIST.md              beat-by-beat: timing, motion, what's on screen
 FACTCHECK.md             every claim, its source, its verdict — one FAIL open
 SOURCES.md               provenance: narration, on-screen strings, toolchain
-PEDAGOGY.md              narration sign-off — register, vocabulary, what was cut
+PEDAGOGY.md              GATE P — signed, VERDICT: PASS; register, vocabulary,
+                         and what was cut from the narration
 BUILD-LOG.md             what actually happened, including revision 2
 description.txt          YouTube description + chapter markers
 .gitignore               enforces the media rule below
@@ -214,6 +215,16 @@ clips/ per-beat conform output
 There is no `vertical/`. An early full-length 228.9 s 9:16 was built by
 bypassing `shorts.py`, which was the wrong call — the 3:00 cap is a real
 constraint. `short/` supersedes it and is the only 9:16 deliverable.
+
+## Voice: this reel is the outlier
+
+Built with Onyx (`am_onyx`), which was the series voice at the time. The series
+moved to Bella (`af_bella`) on 2026-09-17 — an explicit re-voice decision
+recorded in the [fellow README](../README.md#re-voice-decision--2026-09-17).
+
+This reel stays `am_onyx` on disk. Re-voicing it is optional: audio is the
+clock, so new narration changes every beat duration and forces a re-cut of both
+masters. Worth doing if the series is ever published as a set.
 
 ## Open before publication
 
