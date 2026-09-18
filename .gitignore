@@ -3,6 +3,8 @@
 __pycache__/
 *.zip
 *.ZIP
+*.dmg
+*.DMG
 
 # RULE (2026-09-18, Bear): renders stay out; source ASSETS may stay in.
 #   OUT — anything the pipeline produced from a beat sheet: generated narration
