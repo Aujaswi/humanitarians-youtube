@@ -16,6 +16,8 @@
 *.WAV
 *.zip
 *.ZIP
+*.dmg
+*.DMG
 *.pyc
 __pycache__/
 **/deck*.html
