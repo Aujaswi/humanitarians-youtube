@@ -19,30 +19,30 @@
     "aspect": "16:9",
     "builder": "ai-explainer",
     "runtime_target_s": 180,
-    "source_status": "Topic explainer, first-person narration by the fellow. Central factual claim (NIST FRVT demographic-effects findings) verified directly against NISTIR 8280 (2019) before narration was locked — see FACTCHECK.md and SOURCES.md. Restructured 2026-08-05 per a PROOF.md rubric review (see PEDAGOGY.md) — framework moved to the front, a worked example and a real CTA added.",
-    "render_state": "plan-approved-required",
+    "source_status": "Topic explainer, first-person narration by the fellow. Central factual claim (NIST FRVT demographic-effects findings) verified directly against NISTIR 8280 (2019) before narration was locked — see FACTCHECK.md and SOURCES.md. Restructured 2026-08-05 per a PROOF.md rubric review (see PEDAGOGY.md) — framework moved to the front, a worked example and a real CTA added. Rebuilt 2026-08-25 per program feedback: upgraded to 4K (3840x2160), added two new opening beats (B00 silent title card, B01 spoken executive-summary/personal-intro card), all 10 previously-existing beats renumbered B02-B11. See BUILD-LOG.md.",
+    "render_state": "rendered-4k-pending-final-review",
     "gates": {
-      "plan": "APPROVED — 2026-08-03; RESTRUCTURED 2026-08-05 per PROOF.md review (framework-first, worked example, CTA added)",
-      "factcheck": "RESOLVED — 2026-08-03/2026-08-05, NIST FRVT numbers verified against NISTIR 8280 directly; industry-dissent source now named on screen (Security Industry Association) per PROOF review",
-      "narration": "APPROVED — 2026-08-05 (post-restructure)",
-      "audio_lock": "NOT STARTED",
-      "shopping_list": "N/A — all beats planned as self-contained Manim scenes, no pantry stills",
-      "previz": "NOT STARTED",
+      "plan": "APPROVED — 2026-08-03; RESTRUCTURED 2026-08-05 per PROOF.md review (framework-first, worked example, CTA added); RE-APPROVED 2026-08-25 for the 4K rebuild + 2 new opening beats (program feedback)",
+      "factcheck": "RESOLVED — 2026-08-03/2026-08-05, NIST FRVT numbers verified against NISTIR 8280 directly; industry-dissent source now named on screen (Security Industry Association) per PROOF review; unchanged — no new factual claims introduced by B00/B01 (B01 is a personal-intro line, not a factual claim requiring a source)",
+      "narration": "APPROVED — 2026-08-05 (post-restructure); B01 narration APPROVED 2026-08-25 (exact text supplied by program feedback); B00 carries no narration by design",
+      "audio_lock": "LOCKED 2026-08-25 — B00 (silent, ffmpeg anullsrc, 4.60s) + B01 (Kokoro af_bella, 11.66s) generated; B02-B11 unchanged (renamed from old B00-B09, durations re-verified byte-identical via ffprobe against the pre-rebuild beat_sheet.json's actual_duration_s — see BUILD-LOG.md)",
+      "shopping_list": "N/A — all 12 beats are self-contained Manim scenes, no pantry stills",
+      "previz": "DONE 2026-08-25 — 12/12 beats real MANIM media at 3840x2160, 0 slates. GATE A/W static pre-flight clean on all touched classes; GATE V (frame-level, run against the TRUE clean master, not the watermarked -slate.mp4) found 1 real defect (B04 mid-Write glyph-trace at the 50% sample point) which was fixed and re-rendered; final GATE V: 0 BLOCKER, 12 MAJOR, all reviewed by eye against actual frames and judged cosmetic (low-contrast whole-frame heuristic on B02/B04 — ink-on-cream measures 11.99:1 by direct WCAG computation, clearly legible; underfill on B01/B05/B06/B11 — intentionally sparse/centered card layouts).",
       "publish": "NOT AUTHORIZED"
     },
     "lane_histogram": {
-      "body_beats": 10,
+      "body_beats": 12,
       "vox": 0,
       "vox_share": 0.0,
-      "manim": 10,
+      "manim": 12,
       "remotion": 0,
       "card": 0
     },
     "build": {
-      "at": "2026-08-17T11:34:10",
+      "at": "2026-08-26T11:40:59",
       "cut": "master",
-      "filled": 10,
-      "of": 10,
+      "filled": 12,
+      "of": 12,
       "slates": [],
       "skin_warnings": []
     }
@@ -50,6 +50,64 @@
   "beats": [
     {
       "beat_id": "B00",
+      "act": "TITLE",
+      "content_type": "structure",
+      "engine": "kokoro",
+      "voice": "af_bella",
+      "narration_text": "",
+      "new_visual_element": "Silent title card: the video title, bracketed by gold rules, + @HumanitariansAI",
+      "estimated_duration_s": 4.5,
+      "lane": "MANIM",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "motion": "build",
+        "manim": {
+          "scene": "B00_TitleCard",
+          "module": "scenes.py"
+        },
+        "note": "SILENT BEAT — no narration_text, but audio_file points at a REAL silent mp3 (ffmpeg anullsrc, ~4.5s), not null. compile.py's build_master_audio() requires every beat's audio_file to exist or the whole film's per-beat audio falls back to silence (confirmed in the sibling reel's prior build, 2026-08-17-why-ai-generated-code-still-needs-a-human/BUILD-LOG.md). Added 2026-08-25 per program feedback: video title + @HumanitariansAI, no VO, matching that sibling reel's B00_TitleCard precedent."
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 4.6,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-26T11:40:59"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "INTRO",
+      "content_type": "structure",
+      "engine": "kokoro",
+      "voice": "af_bella",
+      "narration_text": "Hi, I'm Sai Pranavi Jeedigunta. This video is about how facial recognition actually works — not a yes-or-no match, but a probability — and when it actually deserves scrutiny.",
+      "new_visual_element": "Personal-intro / executive-summary card: fellow's name, role, and a one-line summary of the video's thesis",
+      "estimated_duration_s": 13,
+      "lane": "MANIM",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "motion": "build",
+        "manim": {
+          "scene": "B01_ExecSummary",
+          "module": "scenes.py"
+        },
+        "note": "Added 2026-08-25 per program feedback: a spoken executive-summary/personal-intro beat carrying the fellow's own on-screen credit (name + role chip) and a one-line thesis summary, distinct from the silent B00 title card that precedes it."
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 11.66,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-26T11:40:59"
+      }
+    },
+    {
+      "beat_id": "B02",
       "act": "HOOK",
       "content_type": "structure",
       "engine": "kokoro",
@@ -63,22 +121,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B00_EverywhereHook",
+          "scene": "B02_EverywhereHook",
           "module": "scenes.py"
         },
         "note": "Four context icons (phone/airport/store/badge) appear in sequence, then a question mark / debate framing."
       },
-      "audio_file": "mp3/beat-B00.mp3",
+      "audio_file": "mp3/beat-B02.mp3",
       "actual_duration_s": 15.48,
       "build": {
         "status": "MANIM",
-        "src": "manim/B00.mp4",
+        "src": "manim/B02.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B01",
+      "beat_id": "B03",
       "act": "FRAMEWORK",
       "content_type": "structure",
       "engine": "kokoro",
@@ -92,22 +150,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B01_FrameworkLens",
+          "scene": "B03_FrameworkLens",
           "module": "scenes.py"
         },
         "note": "Three numbered questions appear in sequence, then a low->high stakes gradient bar previewing 'scrutiny scales with the answers.'"
       },
-      "audio_file": "mp3/beat-B01.mp3",
+      "audio_file": "mp3/beat-B03.mp3",
       "actual_duration_s": 11.81,
       "build": {
         "status": "MANIM",
-        "src": "manim/B01.mp4",
+        "src": "manim/B03.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B02",
+      "beat_id": "B04",
       "act": "MECHANISM",
       "content_type": "mechanism",
       "engine": "kokoro",
@@ -121,22 +179,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B02_PipelineMechanism",
+          "scene": "B04_PipelineMechanism",
           "module": "scenes.py"
         },
         "note": "Same pipeline diagram as before, now tagged 'Q3: how confident?' to connect back to the framework beat."
       },
-      "audio_file": "mp3/beat-B02.mp3",
+      "audio_file": "mp3/beat-B04.mp3",
       "actual_duration_s": 21.12,
       "build": {
         "status": "MANIM",
-        "src": "manim/B02.mp4",
+        "src": "manim/B04.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B03",
+      "beat_id": "B05",
       "act": "BENEFITS",
       "content_type": "realworld",
       "engine": "kokoro",
@@ -150,22 +208,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B03_LegitimateUses",
+          "scene": "B05_LegitimateUses",
           "module": "scenes.py"
         },
         "note": "List-reveal, sage checkmarks, now carrying a visible 'LOW-STAKES' badge tying it to the framework beat."
       },
-      "audio_file": "mp3/beat-B03.mp3",
+      "audio_file": "mp3/beat-B05.mp3",
       "actual_duration_s": 15.14,
       "build": {
         "status": "MANIM",
-        "src": "manim/B03.mp4",
+        "src": "manim/B05.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B04",
+      "beat_id": "B06",
       "act": "HARMS",
       "content_type": "realworld",
       "engine": "kokoro",
@@ -179,22 +237,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B04_HarmfulUses",
+          "scene": "B06_HarmfulUses",
           "module": "scenes.py"
         },
         "note": "List-reveal, crimson marks, now carrying a visible 'HIGH-STAKES' badge tying it to the framework beat."
       },
-      "audio_file": "mp3/beat-B04.mp3",
+      "audio_file": "mp3/beat-B06.mp3",
       "actual_duration_s": 12.38,
       "build": {
         "status": "MANIM",
-        "src": "manim/B04.mp4",
+        "src": "manim/B06.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B05",
+      "beat_id": "B07",
       "act": "EVIDENCE",
       "content_type": "mechanism",
       "engine": "kokoro",
@@ -208,22 +266,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B05_NistEvidence",
+          "scene": "B07_NistEvidence",
           "module": "scenes.py"
         },
         "note": "[VERIFY: NISTIR 8280, see FACTCHECK.md] Bar chart: most-algorithms gap vs. best-performing near-zero gap; dissent line now names the Security Industry Association directly, not 'some industry voices.'"
       },
-      "audio_file": "mp3/beat-B05.mp3",
+      "audio_file": "mp3/beat-B07.mp3",
       "actual_duration_s": 31.27,
       "build": {
         "status": "MANIM",
-        "src": "manim/B05.mp4",
+        "src": "manim/B07.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B06",
+      "beat_id": "B08",
       "act": "FRAMEWORK-CALLBACK",
       "content_type": "structure",
       "engine": "kokoro",
@@ -237,22 +295,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B06_FluencyTrap",
+          "scene": "B08_FluencyTrap",
           "module": "scenes.py"
         },
         "note": "Side-by-side: a fluent AI sentence and a '98% match' score, both 'looks certain' -> both 'a probability, not a fact.'"
       },
-      "audio_file": "mp3/beat-B06.mp3",
+      "audio_file": "mp3/beat-B08.mp3",
       "actual_duration_s": 12.77,
       "build": {
         "status": "MANIM",
-        "src": "manim/B06.mp4",
+        "src": "manim/B08.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B07",
+      "beat_id": "B09",
       "act": "WORKED-EXAMPLE",
       "content_type": "realworld",
       "engine": "kokoro",
@@ -266,22 +324,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B07_WorkedExample",
+          "scene": "B09_WorkedExample",
           "module": "scenes.py"
         },
         "note": "Three Q&A rows reveal in sequence (used for / what if wrong / how confident), each answer tagged high-stakes, ending on 'needs real scrutiny.'"
       },
-      "audio_file": "mp3/beat-B07.mp3",
+      "audio_file": "mp3/beat-B09.mp3",
       "actual_duration_s": 26.86,
       "build": {
         "status": "MANIM",
-        "src": "manim/B07.mp4",
+        "src": "manim/B09.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B08",
+      "beat_id": "B10",
       "act": "CTA",
       "content_type": "structure",
       "engine": "kokoro",
@@ -295,22 +353,22 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B08_YourTurn",
+          "scene": "B10_YourTurn",
           "module": "scenes.py"
         },
         "note": "YOUR TURN title + the three-question checklist template the viewer can literally reuse."
       },
-      "audio_file": "mp3/beat-B08.mp3",
+      "audio_file": "mp3/beat-B10.mp3",
       "actual_duration_s": 17.3,
       "build": {
         "status": "MANIM",
-        "src": "manim/B08.mp4",
+        "src": "manim/B10.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     },
     {
-      "beat_id": "B09",
+      "beat_id": "B11",
       "act": "SIGN-OFF",
       "content_type": "structure",
       "engine": "kokoro",
@@ -324,18 +382,18 @@
         "source": "own",
         "motion": "build",
         "manim": {
-          "scene": "B09_BrandOutro",
+          "scene": "B11_BrandOutro",
           "module": "scenes.py"
         },
         "note": "Brand card: @HumanitariansAI, in for Sai Pranavi Jeedigunta."
       },
-      "audio_file": "mp3/beat-B09.mp3",
+      "audio_file": "mp3/beat-B11.mp3",
       "actual_duration_s": 4.92,
       "build": {
         "status": "MANIM",
-        "src": "manim/B09.mp4",
+        "src": "manim/B11.mp4",
         "filled_by": "manim",
-        "at": "2026-08-17T11:34:10"
+        "at": "2026-08-26T11:40:59"
       }
     }
   ]

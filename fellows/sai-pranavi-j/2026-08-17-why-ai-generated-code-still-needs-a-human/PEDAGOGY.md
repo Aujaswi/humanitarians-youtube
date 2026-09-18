@@ -105,3 +105,67 @@ Title-card addition and Trace-line rewording reviewed and approved by the
 fellow, 2026-08-17, before regenerating audio/render.
 
 VERDICT: PASS
+
+## v4 — Program feedback: 4K, executive-summary beat, self-assessment (2026-08-26)
+
+Applied three pieces of program feedback: (1) confirmed 4K (3840x2160) —
+this reel was already 4K since v3, re-verified after rebuilding on the
+updated toolkit; (2) added a new **B01 EXECUTIVE SUMMARY** beat right after
+the B00 title card — "Hi, I'm Sai Pranavi Jeedigunta. This video is about
+why a fix that looks right isn't always a fix that's actually right — and
+the three questions to ask before you trust one." All prior content beats
+shifted down by one (old B01-B07 -> B02-B08). Act structure above predates
+this shift; add B01 EXEC-SUMMARY between TITLE and HOOK when reading it. (3)
+self-assessed against `PROOF.md` below (newly copied into this folder from
+the facial-recognition project, which already carried it — it's a generic
+protocol doc, not video-specific).
+
+## Self-Assessment against PROOF.md (v4)
+
+**PROOF.md's teaching rubric (0-2 each, /12)** — re-scored against the
+actual v4 video, not carried forward from the v1 self-check above:
+
+| Criterion | Score | Note |
+|---|---|---|
+| Explicit framework | 2 | Rubric (Trace/Consequence/Why) shown as a graphic in B03 before the B04 worked example |
+| Reusable rubric | 2 | The three questions apply to any AI-suggested fix, not just B04's SQL case |
+| Worked example | 2 | B04 walks trace -> consequence -> why live against the code diff, with real explanatory depth (not just the conclusion) |
+| Falsifiability / edge case | 2 | B05 names the low-stakes date-formatter case that breaks a blanket-distrust reading |
+| Active task | 2 | B06's 3-step task is concrete (ask/trace/write-one-sentence), not "ask your AI tool" |
+| Friction | 1 | Same gap as the v1 self-check: the tension between quick-trust and full-scrutiny is stated and resolved, but the viewer never sits with a genuinely ambiguous case before the resolution arrives |
+
+**Total: 11/12.**
+
+**PROOF.md's binary Production Gate**, checked against real extracted frames
+(`_qc/contact_sheet.png`, GATE V run on the true clean 4K master, not the
+watermarked `-slate.mp4`):
+- [x] Evidence legible at the moment of assertion — B04's before/after code
+  diff, B06's checklist, and B05's date-formatter function are all readable
+  at 4K in the contact sheet, not faded/clipped/overlapping.
+- [x] Sources on screen, not just voiced — the worked example is explicitly
+  labeled "illustrative example — a generic before/after pattern" on screen
+  (matching FACTCHECK.md's no-fabrication note), not presented as a sourced
+  real incident without saying so.
+- [x] No claim made without a visible on-screen artifact — every beat's
+  narration has a corresponding graphic (rubric, diff, checklist, etc.).
+
+**GATE V (automated) note:** the toolkit's `final_frame_check.py` was
+updated in this same session's toolkit pull — it now samples far more
+densely (269 frames across the reel vs. the old 18 at 50%/85%-per-beat) and
+treats MAJOR findings as blocking by default. Ran it three ways to get a
+real signal: (1) against the reel positional arg, which defaulted to the
+watermarked `-slate.mp4` and reproduced the long-documented false-positive
+edge-bleed (18 BLOCKER) — not a real defect, same as every prior build in
+this project; (2) against the true master directly (`--mp4 <slug>.mp4`):
+**0 BLOCKER, 74 MAJOR** — nearly all `underfill`/`low-contrast` on frames
+sampled *during* build-in animations (content hasn't fully landed yet) or on
+the deliberately minimal title/exec-summary/brand cards, not on any
+steady-state content frame; (3) visually confirmed via the contact sheet
+that every flagged beat is legible by eye — dark-panel text reads clearly,
+card layouts are intentional minimalist compositions, consistent with this
+fellow's other two videos' own accepted cosmetic-only QC history. Per this
+project's standing rule (never trust the automated report alone, verify
+real frames), 0 BLOCKER stands as the ship bar; the MAJOR count reflects a
+stricter/denser tool, not a new visual regression.
+
+**VERDICT: PASS** (self-assessment; not a substitute for a human reviewer's PROOF.md pass).

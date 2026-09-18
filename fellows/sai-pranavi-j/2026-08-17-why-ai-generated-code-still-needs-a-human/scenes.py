@@ -1,6 +1,16 @@
 """
 Manim scenes for 2026-08-17-why-ai-generated-code-still-needs-a-human
 
+v4 (2026-08-25): program feedback requested a new SPOKEN exec-summary beat
+right after B00's existing silent title card — a personal-intro card (name +
+one-line summary) while the fellow introduces herself and the video's thesis
+in her own voice. This is a second, distinct beat from B00 (title card stays
+silent; B01 is new and narrated), not a replacement. All 7 previously-existing
+content beats renamed B01-B07 -> B02-B08 to make room, the same renumbering
+pattern used when B00 itself was added in v3. Content/timing of B02-B08
+unchanged from v3.1 except the class-name renumbering itself; see BUILD-LOG.md
+v4 entry for the fellow-feedback record.
+
 v3 (2026-08-17): fellow watched v2 (119.03s) and requested two changes —
 (1) a new SILENT title-card opening beat (no narration) before the hook,
     since v1/v2 dove straight into the crash log with no title/branding
@@ -9,23 +19,24 @@ v3 (2026-08-17): fellow watched v2 (119.03s) and requested two changes —
     match the narration fix (fellow found "diff" jargon unclear).
 All 7 pre-existing beats renamed B00-B06 -> B01-B07 to make room for the
 new B00 title card. Content unchanged except the Trace caption in
-B02_FrameworkRubric (see that class for the exact fix).
+B03_FrameworkRubric (see that class for the exact fix).
 
-B00_TitleCard        — silent title card: video title + @HumanitariansAI (TITLE, NEW)
-B01_HookCrashLog     — split screen: escaped-quotes diff vs. crash log (HOOK)
-B02_FrameworkRubric  — the 3-question rubric, Trace / Consequence / Why (FRAMEWORK)
-B03_WorkedExampleDiff— hand-escaped SQL insert vs. parameterized-query fix (WORKED-EXAMPLE)
-B04_FalsifiabilityCase — trivial date-formatter, "LOW STAKES" (FALSIFIABILITY)
-B05_ScaffoldedTask   — the literal 3-step viewer checklist (CTA)
-B06_Close            — callback to B01's crash log, now corrected (CLOSE)
-B07_BrandOutro       — @HumanitariansAI sign-off (SIGN-OFF)
+B00_TitleCard        — silent title card: video title + @HumanitariansAI (TITLE)
+B01_ExecSummary      — spoken personal-intro card: fellow's name + one-line summary (EXEC-SUMMARY, NEW v4)
+B02_HookCrashLog     — split screen: escaped-quotes diff vs. crash log (HOOK)
+B03_FrameworkRubric  — the 3-question rubric, Trace / Consequence / Why (FRAMEWORK)
+B04_WorkedExampleDiff— hand-escaped SQL insert vs. parameterized-query fix (WORKED-EXAMPLE)
+B05_FalsifiabilityCase — trivial date-formatter, "LOW STAKES" (FALSIFIABILITY)
+B06_ScaffoldedTask   — the literal 3-step viewer checklist (CTA)
+B07_Close            — callback to B02's crash log, now corrected (CLOSE)
+B08_BrandOutro       — @HumanitariansAI sign-off (SIGN-OFF)
 
-IMPORTANT (see FACTCHECK.md / SOURCES.md): the B03 worked example is a
+IMPORTANT (see FACTCHECK.md / SOURCES.md): the B04 worked example is a
 GENERIC, illustrative code pattern (a hand-escaped SQL insert vs. a
 parameterized-query fix). It is deliberately NOT attributed to any real
 company, repo, or incident — do not add real names to this file.
 
-All 8 beats are self-contained Manim scenes, no pantry stills, no Remotion.
+All 9 beats are self-contained Manim scenes, no pantry stills, no Remotion.
 Palette: humanitarians (runtime/remotion/src/tokens/humanitarians.ts) — this
 reel uses the hai/Bella persona, not the Claude-branded palette. Convention
 copied from this fellow's sibling reel
@@ -85,7 +96,7 @@ def clear_of_divider(block, divider_x, side, margin=0.35):
     bounds (get_left()/get_right()) rather than trusting whatever fixed
     coordinate + max-width cap it was built with.
 
-    v3.1 (2026-08-17) fix: B01_HookCrashLog's left code block was positioned
+    v3.1 (2026-08-17) fix: B02_HookCrashLog's left code block was positioned
     by centering its header at a fixed x and left-aligning the code lines to
     that header's left edge, capped only by a generous fit() max-width (5.6)
     that was never actually checked against the divider's position. The
@@ -172,10 +183,82 @@ class B00_TitleCard(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B01 — HOOK: split screen, escaped-quotes diff (left) vs. crash log (right)
-# measured audio: 4.66s (unchanged from v2's B00 — renamed only)
+# B01 — EXEC-SUMMARY: spoken personal-intro card (name + one-line thesis
+# summary). NEW 2026-08-25 (v4, program feedback) — inserted directly after
+# B00's silent title card. Unlike B00, this beat carries real narration (the
+# fellow introducing herself and stating the video's thesis in her own
+# voice), so it needs its own on-screen artifact, not a repeat of the title.
+# Reuses this file's house bracket idiom (top rule / content / bottom rule,
+# gold accent, centered composition — see B00_TitleCard) for style
+# consistency, but composes a monogram badge + name/role row + summary block
+# instead of a title, so its shape-state signature is genuinely its own (not
+# a copy-paste of B00) — matters for GATE A's per-class distinctness check.
+# measured audio: see actual_duration_s in beat_sheet.json (retuned below
+# once generate_audio_kokoro.py has measured the real Kokoro length).
 # --------------------------------------------------------------------------- #
-class B01_HookCrashLog(Scene):
+class B01_ExecSummary(Scene):
+    def construct(self):
+        self.camera.background_color = PALETTE["bg"]
+
+        top_rule = Line(LEFT * 3.4, RIGHT * 3.4, color=PALETTE["gold"], stroke_width=3)
+        bottom_rule = Line(LEFT * 3.4, RIGHT * 3.4, color=PALETTE["gold"], stroke_width=3)
+
+        # monogram badge — a real Circle, not just more text — gives this
+        # beat's own distinct non-text shape (B00 has only Line rules; this
+        # beat adds a Circle, so the two beats' shape signatures differ for
+        # real, not just by class name).
+        badge = Circle(radius=0.55, color=PALETTE["teal"], fill_color=PALETTE["teal"],
+                        fill_opacity=0.15, stroke_width=3)
+        initials = Text("SPJ", color=PALETTE["teal"], font_size=30, font=MONO, weight="BOLD")
+        initials.move_to(badge.get_center())
+        badge_group = VGroup(badge, initials)
+
+        name = fit(Text("Sai Pranavi Jeedigunta", color=PALETTE["ink"], font_size=42, weight="BOLD"), 9.0)
+        role = fit(Text("Humanitarians AI Fellow", color=PALETTE["slate"], font_size=22), 7.0)
+        name_block = VGroup(name, role).arrange(DOWN, buff=0.15)
+        header_row = VGroup(badge_group, name_block).arrange(RIGHT, buff=0.4)
+
+        # one-line summary, hand-wrapped to 3 short lines — the video's
+        # thesis, matching the second sentence of the narration_text exactly
+        # in substance (not a paraphrase that drifts from what's spoken).
+        summary_lines = [
+            "This video: why a fix that looks right",
+            "isn't always a fix that's actually right —",
+            "and the 3 questions to ask before you trust one.",
+        ]
+        summary = VGroup(*[
+            fit(Text(l, color=PALETTE["ink"], font_size=26), 11.0) for l in summary_lines
+        ]).arrange(DOWN, buff=0.2)
+
+        # generous inter-element buff (0.75, not the usual ~0.4-0.5) — same
+        # lesson as B00's own GATE V underfill fix: a card with few elements
+        # needs its OWN spacing to clear the 55% canvas-fill floor, not just
+        # word count. Measured against real manim text metrics before
+        # rendering at ~66% coverage of the safe area.
+        VGroup(top_rule, header_row, summary, bottom_rule).arrange(
+            DOWN, buff=0.75
+        ).move_to(ORIGIN)
+
+        self.play(Create(top_rule), run_time=0.3)
+        self.play(Create(badge), FadeIn(initials), run_time=0.4)
+        self.play(FadeIn(name_block, shift=UP * 0.1), run_time=0.5)
+        self.play(FadeIn(summary, shift=UP * 0.1), Create(bottom_rule), run_time=0.6)
+        # everything settled well before the mid-beat QC sample point (the
+        # 4 self.play() calls above sum to 1.8s); the remainder is a clean
+        # static hold tuned to the measured 11.04s Kokoro length for B01
+        # (see beat_sheet.json actual_duration_s / BUILD-LOG.md v4 entry) —
+        # 11.04 - 1.8 = 9.24s exact.
+        self.wait(9.24)
+
+
+# --------------------------------------------------------------------------- #
+# B02 — HOOK: split screen, escaped-quotes diff (left) vs. crash log (right)
+# measured audio: 4.66s (unchanged from v2's B00 — renamed only)
+# v4 (2026-08-25): renamed from B01 -> B02 to make room for the new B01
+# exec-summary beat inserted right after B00's title card. Content/timing
+# unchanged.
+# --------------------------------------------------------------------------- #
+class B02_HookCrashLog(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["ink"]
 
@@ -256,7 +339,8 @@ class B01_HookCrashLog(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B02 — FRAMEWORK: the 3-question rubric, shown in full before any example.
+# B03 — FRAMEWORK: the 3-question rubric, shown in full before any example.
+# v4 (2026-08-25): renamed from B02 -> B03 (new B01 exec-summary beat inserted).
 # v2 (2026-08-17): narration expanded from bare labels to a real explanatory
 # sentence per question, opening with the fellow's requested line ("before
 # you trust it, ask yourself all three"). On-screen content now carries that
@@ -267,7 +351,7 @@ class B01_HookCrashLog(Scene):
 # matches the narration_text fix in beat_sheet.json). Renamed from B01.
 # measured audio: see actual_duration_s in beat_sheet.json (retuned below)
 # --------------------------------------------------------------------------- #
-class B02_FrameworkRubric(Scene):
+class B03_FrameworkRubric(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -359,8 +443,9 @@ class B02_FrameworkRubric(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B03 — WORKED-EXAMPLE: generic hand-escaped SQL insert vs. parameterized fix
+# B04 — WORKED-EXAMPLE: generic hand-escaped SQL insert vs. parameterized fix
 #       [GENERIC EXAMPLE — see FACTCHECK.md — never attribute to a real repo]
+# v4 (2026-08-25): renamed from B03 -> B04 (new B01 exec-summary beat inserted).
 # v2 (2026-08-17): narration expanded from terse one-line-per-question labels
 # ("what line, what table, what executes") to the actual SQL-injection
 # mechanics — why quote-only escaping misses backslashes/null bytes/encoding,
@@ -371,7 +456,7 @@ class B02_FrameworkRubric(Scene):
 # v3 (2026-08-17): renamed from B02 — narration/captions unchanged.
 # measured audio: see actual_duration_s in beat_sheet.json (retuned below)
 # --------------------------------------------------------------------------- #
-class B03_WorkedExampleDiff(Scene):
+class B04_WorkedExampleDiff(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["ink"]
 
@@ -493,10 +578,11 @@ class B03_WorkedExampleDiff(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B04 — FALSIFIABILITY: trivial date-formatter, "LOW STAKES", rubric alongside
+# B05 — FALSIFIABILITY: trivial date-formatter, "LOW STAKES", rubric alongside
 # measured audio: 9.91s (unchanged from v2's B03 — renamed only)
+# v4 (2026-08-25): renamed from B04 -> B05 (new B01 exec-summary beat inserted).
 # --------------------------------------------------------------------------- #
-class B04_FalsifiabilityCase(Scene):
+class B05_FalsifiabilityCase(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -562,7 +648,8 @@ class B04_FalsifiabilityCase(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B05 — CTA: the literal 3-step checklist, copyable text, held >= 3s.
+# B06 — CTA: the literal 3-step checklist, copyable text, held >= 3s.
+# v4 (2026-08-25): renamed from B05 -> B06 (new B01 exec-summary beat inserted).
 # v2 (2026-08-17): narration expanded from naming the 3 steps to explaining
 # why each matters ("don't accept a vague answer" / "not a full audit" /
 # "if you can't write that sentence, you don't understand the fix yet — and
@@ -572,7 +659,7 @@ class B04_FalsifiabilityCase(Scene):
 # v3 (2026-08-17): renamed from B04 — narration/captions unchanged.
 # measured audio: see actual_duration_s in beat_sheet.json (retuned below)
 # --------------------------------------------------------------------------- #
-class B05_ScaffoldedTask(Scene):
+class B06_ScaffoldedTask(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -651,10 +738,11 @@ class B05_ScaffoldedTask(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B06 — CLOSE: callback to B01's crash log, now corrected
+# B07 — CLOSE: callback to B02's crash log, now corrected
 # measured audio: 7.49s (unchanged from v2's B05 — renamed only)
+# v4 (2026-08-25): renamed from B06 -> B07 (new B01 exec-summary beat inserted).
 # --------------------------------------------------------------------------- #
-class B06_Close(Scene):
+class B07_Close(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["ink"]
 
@@ -714,10 +802,11 @@ class B06_Close(Scene):
 
 
 # --------------------------------------------------------------------------- #
-# B07 — SIGN-OFF: @HumanitariansAI, in for Sai Pranavi Jeedigunta
+# B08 — SIGN-OFF: @HumanitariansAI, in for Sai Pranavi Jeedigunta
 # measured audio: 4.92s (unchanged from v2's B06 — renamed only)
+# v4 (2026-08-25): renamed from B07 -> B08 (new B01 exec-summary beat inserted).
 # --------------------------------------------------------------------------- #
-class B07_BrandOutro(Scene):
+class B08_BrandOutro(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 

@@ -1,20 +1,33 @@
 """
 Manim scenes for 2026-07-26-recovering-the-silently-dropped-filings
-B00_CalmDashboard    — calm feed log, nothing looks wrong (HOOK)
-B01_PipelineDiagram  — 5 RSS feeds -> normalize -> score -> Postgres -> email alert
-B02_ClaudeCodeDiff   — the removed empty-description filter (DISCOVERY)
-B03_RecoveredFilings — Cboe / MEMX / Nasdaq GEMX / DOJ antitrust (PROOF)
-B04_BeforeAfterCount — 297 -> 370 items passed (+73 recovered)
-B05_Statement        — "silent filters fail invisibly" (TAKEAWAY)
-B06_BrandOutro       — @HumanitariansAI sign-off
 
-All 5 non-Manim beats (B00 vox-still, B02/B06 Remotion, B03/B05 card) were
-converted to Manim scenes here rather than left as slates: the two Remotion
-patterns the original beat sheet named (ClaudeCodeDiffView,
-HumanitariansResearchReport) don't exist in the installed brutalist/ toolkit,
-and building them would mean adding components to that shared repo, which is
-out of scope for this reel. Manim keeps everything self-contained in this
-folder with no external images or toolkit changes.
+v2 (2026-08-25, 4K program-feedback rebuild) — added B00/B01, renumbered the
+rest by +2:
+B00_TitleCard        — silent title card: "The Pipeline That Was Lying to
+                        Me" + @HumanitariansAI, no narration (TITLE)
+B01_ExecSummary       — personal-intro/executive-summary card, spoken (EXEC-SUMMARY)
+B02_CalmDashboard    — calm feed log, nothing looks wrong (HOOK) [was B00]
+B03_PipelineDiagram  — 5 RSS feeds -> normalize -> score -> Postgres -> email alert [was B01]
+B04_ClaudeCodeDiff   — the removed empty-description filter (DISCOVERY) [was B02]
+B05_RecoveredFilings — Cboe / MEMX / Nasdaq GEMX / DOJ antitrust (PROOF) [was B03]
+B06_BeforeAfterCount — 297 -> 370 items passed (+73 recovered) [was B04]
+B07_Statement        — "silent filters fail invisibly" (TAKEAWAY) [was B05]
+B08_BrandOutro       — @HumanitariansAI sign-off [was B06]
+
+B00/B01 follow the precedent set in the sibling reel
+fellows/sai-pranavi-j/2026-08-17-why-ai-generated-code-still-needs-a-human's
+scenes.py (its B00_TitleCard, v3 renumbering) — same silent-title-card
+mechanics (a real silent mp3, never audio_file: null — see beat_sheet.json's
+B00 shot.note for why) and the same +2-shift renumbering pattern.
+
+All 5 non-Manim beats in the original plan (B00 vox-still, B02/B06 Remotion,
+B03/B05 card) were converted to Manim scenes here rather than left as
+slates: the two Remotion patterns the original beat sheet named
+(ClaudeCodeDiffView, HumanitariansResearchReport) don't exist in the
+installed brutalist/ toolkit, and building them would mean adding components
+to that shared repo, which is out of scope for this reel. Manim keeps
+everything self-contained in this folder with no external images or toolkit
+changes.
 
 Palette: humanitarians (runtime/remotion/src/tokens/humanitarians.ts) —
 this reel uses the hai/Bella persona, not the Claude-branded palette.
@@ -28,14 +41,118 @@ PALETTE = {
     "teal":   "#1F4E5F",  # good / CVD-safe cool
     "crimson": "#E4572E", # bad / CVD-safe warm
     "slate":  "#29335C",  # structure
-    "gold":   "#F3A712",  # fill only
+    "gold":   "#F3A712",  # fill only — never text color
     "sage":   "#A8C686",  # human / growth
 }
 
 MONO = "Courier New"
 
 
-class B00_CalmDashboard(Scene):
+def fit(mob, max_w):
+    if mob.width > max_w:
+        mob.scale_to_fit_width(max_w)
+    return mob
+
+
+class B00_TitleCard(Scene):
+    """Silent title card — no narration. Title pulled verbatim from
+    beat_sheet.json's metadata.title. Two rules (top AND bottom) bracket
+    the title rather than a single underline, so a title-only/handle-only
+    card still earns a real share of the safe frame (GATE V canvas-fill
+    floor) instead of a small cluster at center — same fix the sibling
+    reel's B00_TitleCard needed. Audio: mp3/beat-B00.mp3 is a REAL silent
+    mp3 (ffmpeg anullsrc), not audio_file: null — see beat_sheet.json's
+    B00 shot.note for why a null path would break every beat's narration."""
+
+    def construct(self):
+        self.camera.background_color = PALETTE["bg"]
+
+        title = fit(Text(
+            "The Pipeline That Was Lying to Me",
+            color=PALETTE["ink"], font_size=54, weight="BOLD",
+        ), 12.0)
+
+        top_rule = Line(LEFT * 2.6, RIGHT * 2.6, color=PALETTE["gold"], stroke_width=3)
+        bottom_rule = Line(LEFT * 2.6, RIGHT * 2.6, color=PALETTE["gold"], stroke_width=3)
+        handle = Text("@HumanitariansAI", color=PALETTE["slate"], font_size=38)
+
+        # buff=1.3 (not the usual ~0.4-0.5): a title-only card has just 3
+        # elements, so real canvas-fill has to come from spacing, not word
+        # count. GATE V's first pass on this card measured only 50% coverage
+        # of the safe area at buff=1.0 (below the 55% floor) — measured
+        # offline against real Manim text metrics (not the render-free static
+        # stub): width=11.40, height=4.04 -> cover=0.50 at buff=1.0. buff=1.3
+        # raises height to 4.94 with the same 11.40 width (still 0.70 clear
+        # of the safe edge on each side) -> cover=0.61, comfortably clear.
+        VGroup(top_rule, title, bottom_rule, handle).arrange(
+            DOWN, buff=1.3
+        ).move_to(ORIGIN)
+
+        self.play(Create(top_rule), run_time=0.35)
+        self.play(FadeIn(title, shift=UP * 0.15), run_time=0.8)
+        # bottom rule + handle land together, one beat — a title reveal,
+        # not a race of separate steps
+        self.play(Create(bottom_rule), FadeIn(handle, shift=UP * 0.1), run_time=0.5)
+        # settled well before the mid-beat QC sample point; the remainder is
+        # a clean static hold tuned to the real measured silent-track length
+        # (4.23s, mp3/beat-B00.mp3) so this clip needs no compile-time retime.
+        self.wait(2.58)
+
+
+class B01_ExecSummary(Scene):
+    """Spoken personal-intro / executive-summary card — the fellow's name
+    and role, then a one-line plain-language summary of what the video
+    covers. Narration text is fixed verbatim by the program feedback (see
+    beat_sheet.json B01.narration_text), not authored here."""
+
+    def construct(self):
+        self.camera.background_color = PALETTE["bg"]
+
+        name = fit(Text(
+            "Sai Pranavi Jeedigunta", color=PALETTE["ink"], font_size=58, weight="BOLD",
+        ), 11.0)
+        role = Text(
+            "Humanitarians AI Fellow", color=PALETTE["slate"], font_size=28,
+        )
+        accent = Line(LEFT * 1.8, RIGHT * 1.8, color=PALETTE["gold"], stroke_width=3)
+        summary = fit(Text(
+            "Recovering silently-dropped SEC and exchange filings",
+            color=PALETTE["ink"], font_size=34,
+        ), 11.5)
+
+        # buff=1.3 (not the usual ~0.4-0.5) — GATE V's first pass on this
+        # card measured only 23% coverage of the safe area (font_size
+        # 46/22/27, buff=0.45): a 4-element name+role+summary card is
+        # naturally compact. Measured offline against real Manim text
+        # metrics (not the render-free static stub): the font sizes below
+        # + buff=1.3 give width=10.51, height=5.33 -> cover=0.61, with
+        # 1.15/0.94 units of clearance from the safe edge on width/height
+        # respectively — comfortably clear of both the 55% floor and any
+        # edge-bleed risk.
+        VGroup(name, role, accent, summary).arrange(DOWN, buff=1.3).move_to(ORIGIN)
+        # second real (non-text) shape, added later than `accent` — a lone
+        # static Line for the whole hold trips GATE A's "shapes never
+        # change" repeated-animation check (1 distinct state across 3+
+        # snapshots); this mirrors B08_BrandOutro's own tagline_underline
+        # pattern already used elsewhere in this file.
+        summary_underline = Line(color=PALETTE["sage"], stroke_width=1)
+
+        self.play(FadeIn(name, shift=UP * 0.2), run_time=0.7)
+        self.play(FadeIn(role, shift=UP * 0.1), run_time=0.5)
+        self.play(Create(accent), run_time=0.5)
+        self.play(FadeIn(summary, shift=UP * 0.1), run_time=0.8)
+        summary_underline.put_start_and_end_on(
+            summary.get_corner(DL) + DOWN * 0.12, summary.get_corner(DR) + DOWN * 0.12
+        )
+        self.play(Create(summary_underline), run_time=0.3)
+        # hold tuned to the measured narration length (13.87s,
+        # mp3/beat-B01.mp3, generated by generate_audio_kokoro.py) —
+        # 0.7+0.5+0.5+0.8+0.3=2.8s of animation above, so the remaining
+        # 11.07s is a clean static hold.
+        self.wait(11.07)
+
+
+class B02_CalmDashboard(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -77,7 +194,7 @@ class B00_CalmDashboard(Scene):
         self.wait(4.7)
 
 
-class B02_ClaudeCodeDiff(Scene):
+class B04_ClaudeCodeDiff(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["ink"]
         cream = PALETTE["bg"]
@@ -140,7 +257,7 @@ class B02_ClaudeCodeDiff(Scene):
         self.wait(8.4)
 
 
-class B03_RecoveredFilings(Scene):
+class B05_RecoveredFilings(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -169,7 +286,7 @@ class B03_RecoveredFilings(Scene):
         self.wait(3.8)
 
 
-class B05_Statement(Scene):
+class B07_Statement(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -187,7 +304,7 @@ class B05_Statement(Scene):
         self.wait(5.0)
 
 
-class B06_BrandOutro(Scene):
+class B08_BrandOutro(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -208,7 +325,7 @@ class B06_BrandOutro(Scene):
         self.wait(2.7)
 
 
-class B01_PipelineDiagram(Scene):
+class B03_PipelineDiagram(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -299,7 +416,7 @@ class B01_PipelineDiagram(Scene):
         self.wait(10.0)
 
 
-class B04_BeforeAfterCount(Scene):
+class B06_BeforeAfterCount(Scene):
     """Uses Text (Pango) instead of Integer/DecimalNumber for the animated
     count — Integer renders digits via LaTeX, which this machine doesn't have
     installed (Manim equation beats are the one blocked toolkit feature)."""

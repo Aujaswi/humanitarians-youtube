@@ -1,0 +1,25 @@
+# Media files — never committed; go to Google Drive instead
+# Note: mp3 is excluded per-file (mp3/*), not as a directory (mp3/). Git will
+# not descend into an excluded directory, so a directory rule would make the
+# timings.json re-include below unreachable.
+**/mp3/*
+mp4/
+media/
+clips/
+_qc/
+_work/
+*.mp4
+*.mp3
+*.m4a
+
+# ...but keep the measured timings. They are the clock this reel was cut to,
+# they are text, and the visuals cannot be re-conformed without them.
+!**/mp3/timings.json
+
+# Build venv / caches
+.venv/
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db

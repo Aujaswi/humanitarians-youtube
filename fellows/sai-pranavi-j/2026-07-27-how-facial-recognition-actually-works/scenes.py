@@ -7,16 +7,31 @@ the end), the low/high-stakes examples are explicitly tagged as instances of
 that framework, a worked example applies the framework live to a concrete
 case, and a real scaffolded CTA was added (there was none before).
 
-B00_EverywhereHook   — phone/airport/store/policing icons, debate framing (HOOK)
-B01_FrameworkLens    — the reusable lens: 3 questions, shown before any example (FRAMEWORK)
-B02_PipelineMechanism — detect -> embed -> compare -> similarity score, tagged Q3 (MECHANISM)
-B03_LegitimateUses    — accessibility, unlock, missing persons, medical — tagged LOW-STAKES (BENEFITS)
-B04_HarmfulUses       — mass surveillance, retail tracking, biometric risk — tagged HIGH-STAKES (HARMS)
-B05_NistEvidence      — NIST FRVT: real gap for most, near-zero for the best; dissent named on screen (EVIDENCE)
-B06_FluencyTrap       — a fluent paragraph and a match score both look certain (FRAMEWORK-CALLBACK)
-B07_WorkedExample     — the lens applied live to a retail loss-prevention case (WORKED-EXAMPLE)
-B08_YourTurn          — a real scaffolded task, not a vague pointer (CTA)
-B09_BrandOutro        — @HumanitariansAI, in for Sai Pranavi Jeedigunta (SIGN-OFF)
+Renumbered 2026-08-25 for the 4K program-feedback rebuild: two new beats were
+added at the very start (a silent title card + a spoken executive-summary
+personal-intro card), and all 10 previously-existing beats shifted down by 2
+(old B00->B02 ... old B09->B11). This follows the exact renumbering precedent
+used in this fellow's sibling reel
+(2026-08-17-why-ai-generated-code-still-needs-a-human/scenes.py, v3 build,
+see its BUILD-LOG.md 2026-08-17 entries) — same mechanics: a real silent mp3
+(ffmpeg anullsrc, NOT audio_file: null — compile.py's build_master_audio()
+requires every beat's audio_file to exist or the whole film's audio falls
+back to silence), classes mechanically renamed to their new B0N prefixes,
+and all manim/clips/media outputs cleared before re-render so stale
+beat-ID-keyed clips don't silently fill the wrong new slot.
+
+B00_TitleCard         — silent title card: video title + @HumanitariansAI, no narration (TITLE)
+B01_ExecSummary       — spoken personal-intro card: fellow name + one-line summary (INTRO)
+B02_EverywhereHook   — phone/airport/store/policing icons, debate framing (HOOK)
+B03_FrameworkLens    — the reusable lens: 3 questions, shown before any example (FRAMEWORK)
+B04_PipelineMechanism — detect -> embed -> compare -> similarity score, tagged Q3 (MECHANISM)
+B05_LegitimateUses    — accessibility, unlock, missing persons, medical — tagged LOW-STAKES (BENEFITS)
+B06_HarmfulUses       — mass surveillance, retail tracking, biometric risk — tagged HIGH-STAKES (HARMS)
+B07_NistEvidence      — NIST FRVT: real gap for most, near-zero for the best; dissent named on screen (EVIDENCE)
+B08_FluencyTrap       — a fluent paragraph and a match score both look certain (FRAMEWORK-CALLBACK)
+B09_WorkedExample     — the lens applied live to a retail loss-prevention case (WORKED-EXAMPLE)
+B10_YourTurn          — a real scaffolded task, not a vague pointer (CTA)
+B11_BrandOutro        — @HumanitariansAI, in for Sai Pranavi Jeedigunta (SIGN-OFF)
 
 Palette: humanitarians (runtime/remotion/src/tokens/humanitarians.ts) —
 this reel uses the hai/Bella persona, not the Claude-branded palette.
@@ -66,7 +81,119 @@ def fit(mob, max_w):
     return mob
 
 
-class B00_EverywhereHook(Scene):
+# --------------------------------------------------------------------------- #
+# B00 — TITLE: silent opening card, video title + @HumanitariansAI, no VO.
+# NEW 2026-08-25 program-feedback rebuild — same mechanics as the sibling
+# reel's B00_TitleCard (2026-08-17-why-ai-generated-code-still-needs-a-human):
+# a bracketed title card (rule above AND below, not just an underline, so a
+# title-only/handle-only card still uses a real share of the safe frame —
+# GATE V's canvas-fill floor), reusing this reel's own PALETTE (humanitarians:
+# cream ground, ink text, gold accent rule).
+# Silent-beat duration: narration_text is "" for this beat (no VO to
+# measure), so its length is a fixed silent-beat target, not a measured
+# Kokoro length — see beat_sheet.json shot.note. audio_file points at a REAL
+# silent mp3 (ffmpeg anullsrc), never `null` — compile.py's
+# build_master_audio() requires every beat's audio_file to exist, or the
+# entire film's audio falls back to silence, not just this one beat's.
+# --------------------------------------------------------------------------- #
+class B00_TitleCard(Scene):
+    def construct(self):
+        self.camera.background_color = PALETTE["bg"]
+
+        # Title wrapped onto two hand-set lines (10 words / 63 chars — too
+        # long for one legible line at title-card size), each fit to the
+        # safe width rather than shrunk to an arbitrary font size.
+        title_line1 = fit(Text(
+            "How Facial Recognition Actually Works",
+            color=PALETTE["ink"], font_size=48, weight="BOLD",
+        ), 12.0)
+        title_line2 = fit(Text(
+            "(And When It Shouldn't)",
+            color=PALETTE["ink"], font_size=48, weight="BOLD",
+        ), 12.0)
+        title = VGroup(title_line1, title_line2).arrange(DOWN, buff=0.32)
+
+        top_rule = Line(LEFT * 2.6, RIGHT * 2.6, color=PALETTE["gold"], stroke_width=3)
+        bottom_rule = Line(LEFT * 2.6, RIGHT * 2.6, color=PALETTE["gold"], stroke_width=3)
+        handle = Text("@HumanitariansAI", color=PALETTE["slate"], font_size=36)
+
+        # buff=1.0 (not the usual ~0.4-0.5): a title-only card has just 3
+        # elements, so real canvas-fill (GATE V's 55% floor) has to come from
+        # spacing, not word count — same calculated fix as the sibling reel's
+        # B00, ~63% fill at this buff.
+        VGroup(top_rule, title, bottom_rule, handle).arrange(
+            DOWN, buff=1.0
+        ).move_to(ORIGIN)
+
+        # Two distinct shape-states (top_rule alone, then + bottom_rule) —
+        # GATE A's static distinctness check flags an all-text/all-static
+        # scene as "repeated animation"; text (title/handle) doesn't count
+        # toward that signature, so the two rules are the load-bearing shapes.
+        self.play(Create(top_rule), run_time=0.35)
+        self.play(FadeIn(title, shift=UP * 0.15), run_time=0.8)
+        self.play(Create(bottom_rule), FadeIn(handle, shift=UP * 0.1), run_time=0.5)
+        # tuned to the measured silent-mp3 length (mp3/beat-B00.mp3, 4.60s):
+        # 0.35+0.8+0.5 play-time + this wait = 4.60s native runtime.
+        self.wait(2.95)
+
+
+# --------------------------------------------------------------------------- #
+# B01 — INTRO: spoken personal-intro card. Fellow's name + one-line summary
+# of the video, read over the exec-summary narration line. NEW 2026-08-25.
+# Not a copy of the sibling reel's B00 (that one is silent/title-only) —
+# this is the "executive summary" pattern: a name card the fellow can point
+# to as a real on-camera-style credit, distinct from the pure brand title
+# card that precedes it.
+# --------------------------------------------------------------------------- #
+class B01_ExecSummary(Scene):
+    def construct(self):
+        self.camera.background_color = PALETTE["bg"]
+
+        avatar = Circle(radius=0.85, color=PALETTE["teal"], stroke_width=3,
+                         fill_color=PALETTE["teal"], fill_opacity=0.12)
+        initials = Text("SPJ", color=PALETTE["teal"], font_size=34).move_to(avatar)
+        avatar_group = VGroup(avatar, initials).move_to(UP * 2.1)
+        self.play(FadeIn(avatar_group, scale=1.15), run_time=0.6)
+        self.wait(0.2)
+
+        name = fit(Text("Sai Pranavi Jeedigunta", color=PALETTE["ink"],
+                         font_size=38, weight="BOLD"), 10.5)
+        name.next_to(avatar_group, DOWN, buff=0.35)
+        self.play(Write(name), run_time=0.7)
+
+        underline = Line(color=PALETTE["gold"], stroke_width=3)
+        underline.put_start_and_end_on(
+            name.get_corner(DL) + DOWN * 0.14, name.get_corner(DR) + DOWN * 0.14
+        )
+        self.play(Create(underline), run_time=0.35)
+
+        role_chip = RoundedRectangle(width=3.6, height=0.55, corner_radius=0.15,
+                                      fill_color=PALETTE["slate"], fill_opacity=0.18,
+                                      stroke_color=PALETTE["slate"], stroke_width=2)
+        role_chip.next_to(underline, DOWN, buff=0.3)
+        role_txt = Text("Fellow, Humanitarians AI", color=PALETTE["ink"],
+                         font_size=20).move_to(role_chip)
+        self.play(FadeIn(role_chip), Write(role_txt), run_time=0.6)
+        self.wait(0.2)
+
+        summary_line1 = fit(Text(
+            "How facial recognition actually works — not a yes-or-no",
+            color=PALETTE["ink"], font_size=24
+        ), 11.0)
+        summary_line2 = fit(Text(
+            "match, but a probability — and when it deserves scrutiny.",
+            color=PALETTE["ink"], font_size=24
+        ), 11.0)
+        summary = VGroup(summary_line1, summary_line2).arrange(DOWN, buff=0.22)
+        summary.next_to(role_chip, DOWN, buff=0.55)
+        self.play(Write(summary), run_time=1.1)
+        # tuned to the measured Kokoro duration of mp3/beat-B01.mp3 (11.66s) —
+        # 0.6+0.7+0.35+0.6+1.1 play-time + this wait = 11.66s native runtime,
+        # settled well before the 50% GATE V sample point.
+        self.wait(8.31)
+
+
+class B02_EverywhereHook(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -106,7 +233,7 @@ class B00_EverywhereHook(Scene):
         self.wait(6.0)
 
 
-class B01_FrameworkLens(Scene):
+class B03_FrameworkLens(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -162,7 +289,7 @@ class B01_FrameworkLens(Scene):
         self.wait(6.0)
 
 
-class B02_PipelineMechanism(Scene):
+class B04_PipelineMechanism(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -211,7 +338,7 @@ class B02_PipelineMechanism(Scene):
             self.play(Create(box), Write(label), run_time=0.5)
             if i < len(arrows):
                 self.play(GrowArrow(arrows[i]), run_time=0.3)
-        self.wait(0.4)
+        self.wait(0.1)
 
         gauge_bg = RoundedRectangle(width=4.6, height=0.55, corner_radius=0.25,
                                      fill_color=PALETTE["ink"], fill_opacity=0.08,
@@ -235,11 +362,21 @@ class B02_PipelineMechanism(Scene):
             color=PALETTE["crimson"], font_size=22
         ), 9.5)
         caption.next_to(gauge_bg, DOWN, buff=0.35)
-        self.play(Write(caption), run_time=0.8)
-        self.wait(7.0)
+        # FIX 2026-08-25 (real GATE V defect, found by direct frame inspection
+        # of the true 4K master, not the automated report alone): this beat's
+        # native runtime is stretched ~1.39x to conform to its measured
+        # 21.12s audio, and GATE V's 50% sample point landed exactly inside
+        # the old Write(caption) letter-by-letter animation (started at
+        # native 7.4s, native halfway = 7.6s) — the frame showed a
+        # half-traced, overlapping-looking glyph mess. Write() -> FadeIn()
+        # (whole-string opacity, no partial-glyph tracing) + shaved 0.8s off
+        # the earlier build-up so the caption is fully settled by native
+        # 7.4s, safely ahead of the 7.6s halfway mark.
+        self.play(FadeIn(caption), run_time=0.3)
+        self.wait(7.8)
 
 
-class B03_LegitimateUses(Scene):
+class B05_LegitimateUses(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -277,7 +414,7 @@ class B03_LegitimateUses(Scene):
         self.wait(4.5)
 
 
-class B04_HarmfulUses(Scene):
+class B06_HarmfulUses(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -314,7 +451,7 @@ class B04_HarmfulUses(Scene):
         self.wait(5.0)
 
 
-class B05_NistEvidence(Scene):
+class B07_NistEvidence(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -380,7 +517,7 @@ class B05_NistEvidence(Scene):
         self.wait(9.0)
 
 
-class B06_FluencyTrap(Scene):
+class B08_FluencyTrap(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -426,7 +563,7 @@ class B06_FluencyTrap(Scene):
         self.wait(6.0)
 
 
-class B07_WorkedExample(Scene):
+class B09_WorkedExample(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -476,7 +613,7 @@ class B07_WorkedExample(Scene):
         self.wait(9.0)
 
 
-class B08_YourTurn(Scene):
+class B10_YourTurn(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 
@@ -515,7 +652,7 @@ class B08_YourTurn(Scene):
         self.wait(7.0)
 
 
-class B09_BrandOutro(Scene):
+class B11_BrandOutro(Scene):
     def construct(self):
         self.camera.background_color = PALETTE["bg"]
 

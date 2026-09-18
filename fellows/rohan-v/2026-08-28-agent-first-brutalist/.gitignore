@@ -1,0 +1,23 @@
+# Media never goes to GitHub — it goes to the shared Google Drive folder.
+# This is the rule the video itself teaches (B07/B09): text and code only,
+# nothing over 25 MB.
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+
+# Working directories produced by the build
+media/
+manim/
+mp3/
+mp4/
+images/
+pantry/
+_qc/
+short/
+
+# Keep the QC contact sheet out too — regenerate it, don't commit it
+qc-sheet.png

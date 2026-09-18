@@ -29,3 +29,23 @@ One insight, one proof, one takeaway — matches `ai-explainer`'s "tight reel" m
 - Deliberately excluded: parameterized-insert fix, feed-isolation fix, HTML escaping, source misclassification, Layer-2 LLM re-scoring — all candidates for future weekly reports, not this one (see `README.md`).
 
 VERDICT: PASS
+
+## 2026-08-26 — 4K rebuild (2 new beats: B00 title card, B01 exec summary)
+
+Act structure above still holds for the (now shifted) B02-B08 body — content
+unchanged, only beat IDs/scene classes renamed to make room for the new B00/B01
+at the front (see `BUILD-LOG.md`). The new B00 (silent title card) and B01
+(spoken personal-intro/executive-summary) are framing beats, not part of the
+HOOK-through-SIGN-OFF argument, so they don't get their own row above.
+
+**Self-assessment against `PROOF.md`'s actual rubric** (the skeptical-explainer
+review protocol, copied into this folder from the 2026-07-27
+how-facial-recognition-actually-works reel) is in `SELF-ASSESSMENT.md` —
+scored honestly against real extracted frames from the rebuilt master, not
+asserted from the beat sheet. Short version: 4/12 on PROOF's teaching rubric,
+production-gate FAIL (no on-screen source/citation for any claim), which
+reflects a genre mismatch more than a defect — this is a single-insight
+`ai-explainer` case study, not the framework-teaching genre PROOF's rubric is
+built for. See that file for the full, criterion-by-criterion accounting and
+the one broadly-useful takeaway (put a source line on screen next to the
+recovered-filings and before/after-count claims, not just narrate them).

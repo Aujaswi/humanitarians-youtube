@@ -19,6 +19,12 @@ Channel chip on these cuts: `Komal`. House channel: `@HumanitariansAI`.
 - [2026-08-14 Quiet Tech.](./2026-08-14-luxury-quiet-tech/)
 - [2026-08-21 Dead Stock.](./2026-08-21-luxury-dead-stock/)
 - [2026-08-21 Madison Weekly — Scope Locked.](./2026-08-21-madison-weekly-scope-cvat/)
+- [2026-08-28 Archetype Engine.](./2026-08-28-jungian-archetypes/)
+- [2026-08-28 Madison Weekly — Aug 28.](./2026-08-28-madison-weekly-aug-28/)
+- [2026-09-04 The Loop.](./2026-09-04-luxury-the-loop/)
+- [2026-09-04 Madison Weekly — Sep 4.](./2026-09-04-madison-weekly-sep-4/)
+- [2026-09-11 The Owned Face.](./2026-09-11-owned-face/)
+- [2026-09-11 Madison Weekly — Sep 11.](./2026-09-11-madison-weekly/)
 
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 

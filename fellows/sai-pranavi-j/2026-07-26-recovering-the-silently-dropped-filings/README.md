@@ -15,14 +15,16 @@ The other Layer 1 fixes (parameterized inserts, feed isolation, HTML escaping, t
 
 ## Production state
 
-- Plan: **approved**
-- Fact-check gate: **resolved** — see `FACTCHECK.md` (B00 dramatization line removed; one flagged phrasing kept by fellow decision)
-- Narration approval: **approved** — fellow reviewed the rendered master
+- Plan: **approved** (2026-07-26); reopened and re-closed 2026-08-26 for a program-feedback rebuild (4K + 2 new front beats)
+- Fact-check gate: **resolved** — see `FACTCHECK.md` (B00 dramatization line removed; one flagged phrasing kept by fellow decision) — unchanged by the 2026-08-26 rebuild, no claims were touched
+- Narration approval: **approved** for the original 7-beat cut — fellow reviewed that rendered master 2026-07-27. The rebuilt 9-beat cut adds B00 (silent, no narration) and B01 (executive-summary narration text fixed verbatim by the program feedback); **fellow re-review of this specific 9-beat cut is not yet recorded.**
 - Voice: **Bella (`af_bella`)**, confirmed — the installed toolkit only ships two voices (Onyx `am_onyx`, Bella `af_bella`); `af_kore` from the original name-based suggestion doesn't exist
-- Audio lock: **locked**
-- Previz: **complete** — 7/7 beats real (no slates); master is `2026-07-26-recovering-the-silently-dropped-filings.mp4` (88.5s)
-- Visual QC: 0 blocking defects on the clean master; a handful of cosmetic "underfill" notes remain (optional polish)
+- Audio lock: **locked** — original 7 beats locked 2026-07-26; extended 2026-08-26 to 9 beats (B00 silent + B01 new), with the 7 original beats' audio regenerated and confirmed byte-for-byte-equivalent-length to the original lock
+- Previz: **complete** — 9/9 beats real (no slates); master is `2026-07-26-recovering-the-silently-dropped-filings.mp4`, **3840x2160 (4K), 106.46s**
+- Visual QC: 0 BLOCKER defects on the true clean master (checked directly, not the watermarked review cut); 11 MAJOR cosmetic notes (underfill/low-contrast) — the identical count/category as the pre-rebuild 7-beat master, now under shifted beat IDs, no new defects introduced by the rebuild
+- Self-assessment: scored against `PROOF.md`'s rubric in `SELF-ASSESSMENT.md` — 4/12 (this is a single-insight case-study reel, not the framework-teaching genre PROOF's rubric targets; see that file for the honest breakdown and the one broadly-useful takeaway: put a visible source line next to the recovered-filings/count claims)
 - Publishing: **not authorized**
+- **9:16 Short built (2026-08-28):** `short/2026-07-26-recovering-the-silently-dropped-filings-short.mp4` — **1080x1920, 110.96s**, the whole reel reformatted (under the 180s Shorts cap, so 0 beats dropped, all narration reused unchanged). All 9 GRAPHIC beats got a hand-authored portrait `short/scenes.py` (never auto-cropped, per THE REFORMAT RULE) — see `BUILD-LOG.md`'s 2026-08-28 entry for the two beats that needed a genuine top-to-bottom redesign (B03's pipeline diagram, B06's before/after count) and a Manim CLI portrait-frame quirk found and fixed along the way. GATE V clean (0 BLOCKER/0 MAJOR) on all 9 authored scenes; one MAJOR remains on the toolkit's own auto-generated endcard (flagged as a human design call, not fixable without editing `brutalist/`). Not yet authorized to publish.
 
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 
@@ -34,7 +36,7 @@ The other Layer 1 fixes (parameterized inserts, feed isolation, HTML escaping, t
 
 This is Bella, in for Humanitarians AI. Sai Pranavi inherited a financial regulatory intelligence pipeline this week and found it had been silently dropping real SEC and exchange filings — with no errors, no logs, just missing data. The video walks through the discovery, the fix, and the measured proof.
 
-The current plan contains **7 beats** over roughly **90 seconds**.
+The current plan contains **9 beats** over roughly **106 seconds** (4K, 3840x2160) — a silent title card and a spoken executive-summary/personal-intro card were added at the front 2026-08-26 per program feedback, ahead of the original 7-beat hook-through-sign-off arc.
 
 ## Make your own version
 
@@ -62,19 +64,20 @@ Run this after editing the narration:
 1. **Fact-check:** resolve every claim in `FACTCHECK.md` against the actual pipeline run logs before narration is finalized. (Done for this cut — see the resolution notes there.)
 2. **Gate P — narration review:** read every line aloud; confirm the +73 number and filing names are still accurate as of build time (feed content changes).
 3. **Generate local audio:** Kokoro voice `af_bella` (Bella), Pragmatist register.
-4. **Compile the previz:** render locally; missing beats stay as honest labeled slates until built. (All 7 beats are now real Manim scenes — see `scenes.py`.)
+4. **Compile the previz:** render locally; missing beats stay as honest labeled slates until built. (All 9 beats are real Manim scenes — see `scenes.py`.)
 5. **Watch, refine, and repeat.**
 6. **Publish only by human decision** — a successful local render is not upload authorization.
 
 ## Useful project files
 
 - `beat_sheet.json` — narrative and visual plan
-- `scenes.py` — Manim source for all 7 beats (the actual video content)
+- `scenes.py` — Manim source for all 9 beats (the actual video content)
 - `BUILD-PROMPT.md` — the reproducible context/prompt this video was built from
 - `BUILD-LOG.md` — dated build decisions and gate history
 - `FACTCHECK.md` — claim-level evidence and corrections
 - `SOURCES.md` — research, repo paths, and citation status
 - `SHOTLIST.md` — beat-by-beat medium/timing table
 - `PEDAGOGY.md` — Gate P sign-off (act structure + evidence discipline)
+- `PROOF.md` / `SELF-ASSESSMENT.md` — the skeptical-explainer review protocol and an honest self-scoring of this cut against it
 
 <!-- END BRUTALIST REBUILD GUIDE -->
