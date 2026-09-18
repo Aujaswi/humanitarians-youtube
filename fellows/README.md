@@ -19,17 +19,25 @@ Profile introduction videos live under
 `fellows/profiles/first-name-last-initial/`. Weekly work reports remain under
 the fellow's direct folder.
 
-## GitHub for text, Drive for video
+## GitHub for source and assets, Drive for renders
 
-Keep source and evidence here. Keep rendered media in the shared Google Drive
-and link it from the relevant project README. MP3 and MP4 files do not belong in
-this repository, including generated narration, beat clips, review cuts, and
-final masters.
+Keep source, evidence, and build assets here. Keep rendered media in the shared
+Google Drive and link it from the relevant project README. The line is *what the
+pipeline produced* versus *what the pipeline consumed*:
 
 - GitHub: beat sheets, scripts, source code, prompts, citations, build logs,
-  checks, review notes, and README files.
-- Google Drive: landscape and vertical video masters, audio, and other large
-  binary media.
+  checks, review notes, README files — **and the assets used to build the
+  video**: browser or screen captures, source recordings, sound effects and
+  licensed cues, pantry stills and clips, fixtures. An MP4 or MP3 is fine when
+  it is an input (put it in `capture/`, `assets/`, `sfx/`, or `pantry/`). Keep
+  each file under GitHub's 100 MB limit.
+- Google Drive: **renders** — generated narration (`mp3/`, `audio/`), beat clips
+  (`media/`, `clips/`), Manim output, review cuts, landscape and vertical
+  masters, Topaz/8K variants. The root `.gitignore` excludes these by location
+  and by `-slate`/`-cut`/`-topaz` suffix, not by file type.
+
+(Rule changed 2026-09-18 at Bear's direction; before that all MP3/MP4 files were
+excluded by extension.)
 
 Every directory under `fellows/` uses lowercase kebab-case. This keeps paths
 portable, predictable, and safe to use in scripts.
