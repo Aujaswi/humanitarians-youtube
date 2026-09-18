@@ -44,17 +44,32 @@ measured clock — see that episode's `BUILD-LOG.md`, "REVISION 2".
   topic explainer on zero-day vulnerabilities, **defensive/educational only**:
   three clocks (ATTACKER / VENDOR / DEFENDER), and the argument that most
   defenders guard the smallest of the three gaps. 10 beats · ~2:51.
+- [2026-09-17 — It Never Says Pass](./2026-09-17-mycroft-weekly-it-never-says-pass/) —
+  weekly work report on `mycroft` @ `aa0c0fe`, **episode 4, the finale**: three
+  questions for any automated report, and a gate that is satisfiable by doing
+  nothing. Six of six steps written. 13 beats · ~3:33 · **4K**.
+- [2026-09-18 — The Constraint Isn't Speed](./2026-09-18-6g-and-iot/) —
+  topic explainer on 6G and IoT: three constraints (POWER / COVERAGE / COST PER
+  NODE), speed on none of them, and a vendor's own forecast that 40% of 2030 IoT
+  connections still won't use 6G. 11 beats · ~3:51 · **4K**.
 
 The two 2026-08-27 folders carry a `short/` subfolder: a derivative 1080×1920 cut
 for YouTube Shorts, reusing the parent's audio with only the funnel outro
-regenerated. Both Shorts pass GATE V with **BLOCKER 0**. The 2026-09-03 and
-2026-09-10 reels are landscape only so far.
+regenerated. Both Shorts pass GATE V with **BLOCKER 0**. Everything from
+2026-09-03 on is landscape only so far.
 
-**Series continuity:** the Mycroft weekly is a running series, and each episode
-picks up the previous ledger — ep 1 closes on "gate 2 cannot clear", ep 2 opens
-on that list and resolves two rows, and ep 3's falsifiability beat lands back on
-ep 1's frozen corpus (it reaches only 5 of the 10 catalogue flags). Watch them in
-order: `9ef4e7f` → `bdc1bc1` → `253ee74`.
+**Masters went 4K from 2026-09-17.** The first six reels shipped 1080p cuts from
+4K sources; the two newest are true 3840×2160, recompiled by `./art final` from
+the same slots with no beat re-rendered. The earlier six can be upgraded the
+same way whenever it is wanted.
+
+**Series continuity:** the Mycroft weekly is a four-part arc, and each episode
+picks up the previous ledger — ep 1 opens on six steps marked `[TODO: DEV]` and
+closes on "gate 2 cannot clear"; ep 2 resolves two rows of that list; ep 3's
+falsifiability beat lands back on ep 1's frozen corpus; ep 4 closes the ledger
+at six of six steps and finds the same ep-1 defect one level up (a gate with
+nothing to fail). Watch them in order:
+`9ef4e7f` → `bdc1bc1` → `253ee74` → `aa0c0fe`.
 
 **Dual-use note:** *The Gap You Can Actually Close* is a security topic handled
 defensively. It explains what the term names, reports published statistics, and
