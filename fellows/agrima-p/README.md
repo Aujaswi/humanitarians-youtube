@@ -50,3 +50,12 @@ an explicit, documented re-voice decision is made.
   cuts (9:16 is a full-parity reformat, no beats dropped). Content: publishing
   the Rescue, Reinvented article, producing two Brutalist videos, and a new
   "cat bot" project idea with early cat-shelter research.
+- `2026-09-19-no-face-no-problem/` — No Face, No Problem: Inside the Rise of
+  AI Accounts Nobody's Ever Seen — and Why We Might Trust Them Anyway. An
+  AI-explainer sourced from a user-written article on faceless AI content
+  accounts, built on the ai-explainer chassis. The hook beat (B01) is styled
+  as an abstract stock-footage/caption card rather than a composer card, per
+  an explicit request to perform the article's own subject; two of the
+  article's own hedged stats (creator-venture share, trust-over-personality)
+  are carried with on-screen skepticism flags, not presented as settled
+  fact. 16:9 + 9:16 cuts (9:16 drops 3 middle beats to fit the Shorts cap).
