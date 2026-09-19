@@ -25,6 +25,8 @@ Channel chip on these cuts: `Komal`. House channel: `@HumanitariansAI`.
 - [2026-09-04 Madison Weekly — Sep 4.](./2026-09-04-madison-weekly-sep-4/)
 - [2026-09-11 The Owned Face.](./2026-09-11-owned-face/)
 - [2026-09-11 Madison Weekly — Sep 11.](./2026-09-11-madison-weekly/)
+- [2026-09-17 The Ruler.](./2026-09-17-the-ruler/)
+- [2026-09-18 Madison Weekly — Sep 18.](./2026-09-18-madison-weekly/)
 
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 
