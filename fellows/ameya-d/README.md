@@ -44,3 +44,12 @@ not committed here — they render locally from the beat sheet, and the masters 
 to the Humanitarians AI Drive / YouTube. Full source (with the real project code
 shown on screen) lives at `Ameya-Deshmukh26/fin-disclosure-rag` and
 `Ameya-Deshmukh26/MCP-Stocks_indication` under `youtube/`.
+
+## Frictional log
+
+Every work subfolder here carries its own `FRICTIONAL.md` — a dated record of the process
+behind that specific piece of work, kept beside the evidence it describes: what was tried
+and expected, where it resisted and what was done next, what Claude or another person
+contributed and what was accepted, changed or rejected, and what is now understood or
+still open. Append as you go; never rewrite an earlier entry. It is not graded and not a
+performance review. See <https://www.humanitarians.ai/fellows> for what an entry contains.

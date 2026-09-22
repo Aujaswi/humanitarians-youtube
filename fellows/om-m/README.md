@@ -16,6 +16,15 @@ reports, per the male-coded-name default described in the top-level `fellows/REA
 fellow's own stated preference always overrides that name-based suggestion — this is the fellow's
 actual, already-recorded choice, not an unconfirmed guess).
 
+## Frictional log
+
+Every work subfolder here carries its own `FRICTIONAL.md` — a dated record of the process
+behind that specific piece of work, kept beside the evidence it describes: what was tried
+and expected, where it resisted and what was done next, what Claude or another person
+contributed and what was accepted, changed or rejected, and what is now understood or
+still open. Append as you go; never rewrite an earlier entry. It is not graded and not a
+performance review. See <https://www.humanitarians.ai/fellows> for what an entry contains.
+
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 
 # Om M.

@@ -47,12 +47,14 @@ build assets.
 
 ## Frictional logs
 
-Each fellow keeps `FRICTIONAL.md` at the top of their folder: a weekly, dated record of
-what was tried and expected, where the work resisted and what was done next, what Claude
-or another person contributed and what was accepted, changed or rejected, and what is
-now understood or still open. It is not graded. It is documentation of practical
-learning, kept next to the work it describes, and it is written week by week rather than
-reconstructed later. See <https://www.humanitarians.ai/fellows>.
+Every work subfolder carries its own `FRICTIONAL.md` — `fellows/first-name-last-initial/
+YYYY-MM-DD-slug/FRICTIONAL.md` — logging the process behind *that* piece of work, beside
+the evidence it describes. Dated entries: what was tried and expected, where the work
+resisted and what was done next, what Claude or another person contributed and what was
+accepted, changed or rejected, and what is now understood or still open. Append as you
+go; never rewrite an earlier entry. It is not graded. It is documentation of practical
+learning, written while the work happens rather than reconstructed later.
+See <https://www.humanitarians.ai/fellows>.
 
 ## GitHub for source and assets, Drive for renders
 
