@@ -1,4 +1,8 @@
-# Chaitanya Malepati
+# Chaitanya M.
+
+**Role:** AI Software Engineer  
+**Project:** _to be filled in_  
+**GitHub:** [@malepatic](https://github.com/malepatic)
 
 Humanitarians AI fellow. Weekly research-log teardowns of the **Medhavi** hub
 (`medhavi-hub`) — subsystem audits documented as they happen, in the Brutalist

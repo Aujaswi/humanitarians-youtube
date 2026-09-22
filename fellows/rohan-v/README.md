@@ -1,4 +1,8 @@
-# Rohan V. — Lyrical Literacy
+# Rohan V.
+
+**Role:** Project Manager  
+**Project:** Lyrical Literacy  
+**GitHub:** [@rohanvijaykumar](https://github.com/rohanvijaykumar)
 
 Humanitarians AI fellow. Weekly STEM explainers for the Lyrical Literacy project.
 

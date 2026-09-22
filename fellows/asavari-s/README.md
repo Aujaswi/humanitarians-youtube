@@ -1,4 +1,8 @@
-# Asavari (Ash) Shejwal — Videos
+# Asavari S.
+
+**Role:** AI Data Engineer  
+**Project:** _to be filled in_  
+**GitHub:** [@Asavari24](https://github.com/Asavari24)
 
 Fellow on the **Mycroft** project (SEC Filings Financial Metrics Agent), Humanitarians AI.
 Explainer videos in the house Brutalist format, each produced in 16:9 and 9:16.

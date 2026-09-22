@@ -1,4 +1,8 @@
-# Charitha Sree Veluru — Fellow
+# Charitha V.
+
+**Role:** AWS Specialist  
+**Project:** _to be filled in_  
+**GitHub:** [@VelCharitha77](https://github.com/VelCharitha77)
 
 Humanitarians AI fellow · Physics Vol. 1 (OpenStax interactive textbook) · @HumanitariansAI
 
@@ -13,7 +17,7 @@ Humanitarians AI fellow · Physics Vol. 1 (OpenStax interactive textbook) · @Hu
 
 Suggestion basis: female-coded first name → `af_*`. Stated preference overrides this.
 
-Required PM intro pattern (spoken): *"This is Charitha Sree Veluru in for Sanjana about [topic]."*
+Required PM intro pattern (spoken): *"This is Charitha V. in for Sanjana about [topic]."*
 
 ## Folder layout
 

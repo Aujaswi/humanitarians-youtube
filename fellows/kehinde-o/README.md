@@ -1,4 +1,8 @@
-# Kehinde Obidele
+# Kehinde O.
+
+**Role:** Research Analyst  
+**Project:** _to be filled in_  
+**GitHub:** [@khennyG](https://github.com/khennyG)
 
 Humanitarians AI volunteer, AI Textbook Auditor on the Medhavy cancer textbook
 project. Weekly reports are one dated folder per video.

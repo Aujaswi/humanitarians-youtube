@@ -1,6 +1,10 @@
 # Karishma K.
 
-Weekly video and research updates from **Karishma Suresh Kumar**, Humanitarians AI Fellow.
+**Role:** AI Research Engineer  
+**Project:** _to be filled in_  
+**GitHub:** [@skkarishma20](https://github.com/skkarishma20)
+
+Weekly video and research updates from **Karishma K.**, Humanitarians AI Fellow.
 
 Create one folder per weekly update using lowercase kebab-case and a leading ISO date:
 

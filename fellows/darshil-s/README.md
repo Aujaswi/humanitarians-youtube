@@ -1,4 +1,8 @@
-# Darshil Shah
+# Darshil S.
+
+**Role:** Software Engineer  
+**Project:** MEDAS  
+**GitHub:** [@shahdarshil123](https://github.com/shahdarshil123)
 
 Fellow videos for the MEDAS project (AI-assisted diagnostic system — systems integration and deployment).
 

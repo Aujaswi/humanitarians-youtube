@@ -1,4 +1,8 @@
-# Ameya Deshmukh — Humanitarians AI Fellow
+# Ameya D.
+
+**Role:** Quantitative Research Contributor  
+**Project:** _to be filled in_  
+**GitHub:** [@Ameya-Deshmukh26](https://github.com/Ameya-Deshmukh26)
 
 Weekly video reports and STEM explainers. Built with the
 [brutalist.art](https://github.com/nikbearbrown/brutalist.art) toolkit

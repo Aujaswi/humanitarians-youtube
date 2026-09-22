@@ -1,4 +1,8 @@
-# Dhruvi Shah — Humanitarians AI fellow
+# Dhruvi S.
+
+**Role:** Data Scientist  
+**Project:** _to be filled in_  
+**GitHub:** [@dhruvi218](https://github.com/dhruvi218)
 
 Claude-branded CLI explainers on clinical machine learning and model
 evaluation, built from the `mimic-research` analysis repository.
@@ -17,7 +21,7 @@ House channel: `@HumanitariansAI`. Register: Pragmatist.
 
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 
-# Dhruvi Shah
+# Dhruvi S.
 
 This folder organizes video projects built around beat sheets. Each project
 README explains the subject and documents the free local rebuild workflow.

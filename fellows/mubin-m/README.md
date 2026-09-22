@@ -1,3 +1,9 @@
+# Mubin M.
+
+**Role:** AI Engineer  
+**Project:** _to be filled in_  
+**GitHub:** [@MUBINMODI](https://github.com/MUBINMODI)
+
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 
 # Wrong, Safely.
@@ -6,7 +12,7 @@
 
 **Topic:** IRREDUCIBLY HUMAN · AGENT SYSTEM DESIGN
 
-Made by Mubin Modi. Published on **@HumanitariansAI**.
+Made by Mubin M.. Published on **@HumanitariansAI**.
 
 An explainer on how agentic systems work in production, taught through one worked
 example: a rescheduling agent asked to move a Tuesday appointment to Thursday
@@ -23,7 +29,7 @@ every step returns clean, the final message reads correctly, and a policy check 
 never evaluated.
 
 Source: `agent-storyboard-production-package.md` — "The Reschedule", an 8:10 storyboard
-by Mubin Modi. This reel is the `ai-explainer` compression of it to one insight; the
+by Mubin M.. This reel is the `ai-explainer` compression of it to one insight; the
 full 13-scene arc remains a `deep-explainer` candidate.
 
 ## Make your own version

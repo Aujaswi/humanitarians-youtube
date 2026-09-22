@@ -1,5 +1,9 @@
 # Ritik B.
 
+**Role:** AI Engineer  
+**Project:** _to be filled in_  
+**GitHub:** [@RITIK-12](https://github.com/RITIK-12)
+
 Humanitarians AI fellow. Video projects live in one dated lowercase-kebab
 folder per episode, `YYYY-MM-DD-slug/`, with `beat_sheet.json` and a README.
 

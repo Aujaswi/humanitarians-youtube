@@ -1,4 +1,8 @@
-# Agrima Parmar
+# Agrima P.
+
+**Role:** Social Media Marketing Manager  
+**Project:** _to be filled in_  
+**GitHub:** [@AGRIMAPARMAR4-SUDO](https://github.com/AGRIMAPARMAR4-SUDO)
 
 Fellow videos built with the Brutalist toolkit — AI-explainer and CLI-explainer
 reports.

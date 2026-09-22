@@ -1,4 +1,8 @@
-# Novia Dsilva
+# Novia D.
+
+**Role:** Data Scientist  
+**Project:** _to be filled in_  
+**GitHub:** [@Novia-Dsilva](https://github.com/Novia-Dsilva)
 
 Fellow videos for the Medhavi cancer-textbook fact-check CLI series (Humanitarians AI).
 

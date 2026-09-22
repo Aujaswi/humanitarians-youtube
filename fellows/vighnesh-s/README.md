@@ -1,6 +1,10 @@
 # Vighnesh S.
 
-Weekly research reports from **Vighnesh ("Manny") Sairaman**, NeuroVEP fellow at
+**Role:** Neuroengineering Researcher  
+**Project:** _to be filled in_  
+**GitHub:** [@BOOLEANMAN99](https://github.com/BOOLEANMAN99)
+
+Weekly research reports from **Vighnesh ("Manny") S.**, NeuroVEP fellow at
 Humanitarians AI. Research advisor: Dr. Craig Versek.
 
 Project: **NeuroVEP / ANN mfVEP response classifier** — binary classification of

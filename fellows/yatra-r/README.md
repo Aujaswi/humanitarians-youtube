@@ -1,5 +1,9 @@
 # Yatra R.
 
+**Role:** Social Media Volunteer  
+**Project:** _to be filled in_  
+**GitHub:** _not on file_
+
 Weekly video work for Humanitarians AI, built with the `brutalist.art` toolkit —
 Claude-bookended explainers, narrated with Kokoro (`af_bella`, local and free), rendered
 with Remotion. Channel handle `@Yatra`.

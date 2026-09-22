@@ -1,4 +1,8 @@
-# Uday Sonawane — Humanitarians AI fellow
+# Uday S.
+
+**Role:** Developer  
+**Project:** _to be filled in_  
+**GitHub:** [@Udaydsmls](https://github.com/Udaydsmls)
 
 Weekly work reports and AI explainers for the `@HumanitariansAI` channel, built
 on the Brutalist audio-first chassis.
@@ -80,7 +84,7 @@ targeting breakdown was available and deliberately cut.
 **One exception to the voice/name convention:** *The Brand That Didn't Exist* is
 a topic explainer, not a work report, and per the author's instruction it carries
 **no personal names anywhere** — its intro speaks none. Every other reel here
-opens with "I'm Uday Sonawane".
+opens with "I'm Uday S.".
 
 ## Rendered videos
 
@@ -99,7 +103,7 @@ are tracked here. The Drive folder above is a review location, not a release.
 
 <!-- BEGIN BRUTALIST REBUILD GUIDE -->
 
-# Uday Sonawane
+# Uday S.
 
 This folder organizes video projects built around beat sheets. Each project
 README explains the subject and documents the free local rebuild workflow.

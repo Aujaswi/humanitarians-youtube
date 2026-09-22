@@ -1,4 +1,8 @@
-# Aishwarya Patil
+# Aishwarya P.
+
+**Role:** Software Engineer  
+**Project:** Mycroft  
+**GitHub:** [@AISHWARYA4114](https://github.com/AISHWARYA4114)
 
 Fellow videos for the Mycroft project (patent intelligence and finance research desk).
 

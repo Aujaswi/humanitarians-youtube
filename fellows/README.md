@@ -19,6 +19,41 @@ Profile introduction videos live under
 `fellows/profiles/first-name-last-initial/`. Weekly work reports remain under
 the fellow's direct folder.
 
+## Folder naming and the fellow README
+
+Every directory under `fellows/` is lowercase kebab-case and named
+`first-name-last-initial` — `asavari-s/`, `rohan-v/`. Where two fellows share a first
+name and a last initial, and only there, the name extends to two surname letters
+(`arjun-pa/` and `arjun-pu/`). Nothing else identifying goes in a path.
+
+**No personal information anywhere in this tree beyond a first name, a last initial and
+a GitHub id.** No surnames, no email addresses, no phone numbers, no student or employee
+numbers — not in folder names, READMEs, beat sheets, descriptions or build logs.
+
+Every fellow folder carries a `README.md` opening with exactly this block:
+
+```markdown
+# Firstname L.
+
+**Role:** <role>
+**Project:** <project>
+**GitHub:** [@handle](https://github.com/handle)
+```
+
+Below that block the README says what is in the folder — one line per dated work
+subfolder — followed by the Frictional note. Each piece of work keeps its own
+`YYYY-MM-DD-short-slug/` subfolder holding its `beat_sheet.json`, README, sources and
+build assets.
+
+## Frictional logs
+
+Each fellow keeps `FRICTIONAL.md` at the top of their folder: a weekly, dated record of
+what was tried and expected, where the work resisted and what was done next, what Claude
+or another person contributed and what was accepted, changed or rejected, and what is
+now understood or still open. It is not graded. It is documentation of practical
+learning, kept next to the work it describes, and it is written week by week rather than
+reconstructed later. See <https://www.humanitarians.ai/fellows>.
+
 ## GitHub for source and assets, Drive for renders
 
 Keep source, evidence, and build assets here. Keep rendered media in the shared
