@@ -10,8 +10,14 @@ being reported on**, not the day the video was rendered.
 
 ## Voice
 
-**Kokoro `af_bella` ("Bella") is the voice for this series**, and is recorded in
-every episode's `beat_sheet.json` under `metadata.voice_kokoro`.
+**Kokoro `am_onyx` is the voice for this series.** `af_bella` ("Bella") was the
+original standing choice (see below) and is recorded in every episode's
+`beat_sheet.json` under `metadata.voice_kokoro` — but as of 2026-09-20 four
+consecutive weeks (2026-08-30, 09-03, 09-13, 09-20) have shipped `am_onyx`, so
+per this section's own stated rule, the standing choice is corrected here
+rather than logging a fifth exception to a default that no longer describes
+the work. Episodes before 2026-08-30 remain accurately described by their own
+notes below.
 
 **Documented re-voice, 2026-07-29.** The first episode (CommBank) was produced
 in the Teardown register with `am_onyx`. From the Klarna episode onward the
@@ -56,6 +62,15 @@ has actually shipped since 2026-08-30.** If the next episode uses Onyx too, the
 honest move is to change the standing choice and log `af_bella` as the exception
 — not to keep adding exceptions to a default that no longer describes the work.
 
+**Week 23 confirms it — standing choice updated, 2026-09-20.** Both Week 23
+films (topic and work) ship `am_onyx`, for the same reason as Weeks 21–22: the
+topic video narrates a reading rather than a walkthrough, and the work video
+ships the same week with the same presenter named aloud, so both carry the
+same timbre. That's four consecutive weeks on Onyx, which is exactly the
+condition this section said would trigger changing the default rather than
+adding a fifth exception — so the opening line above now names `am_onyx` as
+the standing choice, and `af_bella` is the one carried as history.
+
 ## Episodes
 
 | Week reported | Folder | Subject |
@@ -74,6 +89,8 @@ honest move is to change the standing choice and log `af_bella` as the exception
 | 2026-09-03 | [`2026-09-03-the-stages-that-stayed-dark-mycroft`](./2026-09-03-the-stages-that-stayed-dark-mycroft/) | Zurich/Clara — move one line, and 27 of 28 tests still pass |
 | 2026-09-13 | [`2026-09-13-two-per-second-stem-video`](./2026-09-13-two-per-second-stem-video/) | Three witnesses to two per second — three fields agree, and one only ever said "in English" |
 | 2026-09-13 | [`2026-09-13-what-had-to-be-invented-mycroft`](./2026-09-13-what-had-to-be-invented-mycroft/) | Capital One — five stages, and the three honest moves when the record runs out |
+| 2026-09-20 | [`2026-09-20-same-room-different-argument-stem-video`](./2026-09-20-same-room-different-argument-stem-video/) | Same room, different argument — four names across forty years, and the popular retelling nobody checked |
+| 2026-09-20 | [`2026-09-20-the-emptiest-row-mycroft`](./2026-09-20-the-emptiest-row-mycroft/) | Lloyds — four AI systems scored on the same two axes, and the one row that came back empty |
 
 ## Two lanes
 
