@@ -25,7 +25,7 @@ the full build record are outside this repo.
 Both carry one lossy audio generation: narration is normalised on PCM before a single
 AAC encode. Crest factor 11.04 and 11.38 against ~10.4 in the source narration.
 
-**Title as published:** working title only — never locked as final.
+**Title as published:** *The Emptiest Row* — locked as final, 2026-09-22.
 
 **Source:** `13-lloyds-banking-group-agentic-ai-retail-banking-CASE-STUDY.md` and its
 companion reference implementation, `lloyds_financial_assistant_pipeline.zip`.
