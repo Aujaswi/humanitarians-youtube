@@ -25,8 +25,7 @@ outside this repo.
 Both carry one lossy audio generation: narration is normalised on PCM before a single
 AAC encode.
 
-**Title as published:** working title only — never locked as final. Confirm before
-publishing.
+**Title as published:** *Same Room, Different Argument* — locked as final, 2026-09-22.
 
 **Topic drawn from:** `claude-for-computer-science/chinese-room-explainer-vox` — the
 existing 8-beat cut there is marked never publish and was superseded by this lineage
