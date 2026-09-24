@@ -1,5 +1,17 @@
 # Fellows
 
+## Example of a month-one renewal report
+
+Start with [Example Fellow — Brutalist team](example-f/README.md) for a complete
+reporting structure: a fellow executive summary, descriptive work folders, direct
+evidence links, weekly hours, Frictional logs, a research plan, and a
+[Markdown renewal request](example-f/renewal-requests/2026-09-21-renewal-request.md).
+The fellow and hours are fictional. The four beat sheets are attributed adaptations
+of existing Claude/Bear productions; no new finished videos, employment records,
+or supervisor approvals are claimed. Missing evidence is explicitly marked.
+Use the structure with your own actual records. Professor Bear must be able to
+open the evidence directly; finding it is the fellow's reporting responsibility.
+
 This top-level collection is the source record for Humanitarians AI fellow work.
 It holds the text, code, research, prompts, review notes, and beat sheets that make
 each film reproducible and auditable. In that sense, this is where **film as
