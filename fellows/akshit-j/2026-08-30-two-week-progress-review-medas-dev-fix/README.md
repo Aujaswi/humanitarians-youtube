@@ -52,16 +52,16 @@ python3 runtime/scripts/remotion_scenes.py $REEL/vertical
 
 Rendered media (`mp3/`, `media/`, `clips/`, MP4s, QC frames) are produced locally and are not checked into this repo.
 
-**Approvals and checks:** fact-check confirmed by Akshit on 2026-09-23. Landscape and vertical exports both passed the toolkit's final gates (GATE T type check, frame checks) with receipts `status: ready`.
+**Approvals and checks:** fact-check confirmed by Akshit on 2026-09-23. 16:9 and 9:16 exports both passed the toolkit's final gates (GATE T type check, frame checks) with receipts `status: ready`.
 
 ## Watch and review
 
 | Version | Drive link | Resolution | Duration | SHA-256 |
 |---|---|---|---|---|
-| Landscape | _[Drive link]_ | 3840×2160 | 3:14 | `9224a37f48169f1d07070dab2de8f65b97719ae045390b8bf064441512c47ff2` |
-| Vertical | _[Drive link]_ | 2160×3840 | 3:14 | `8b5044eca1c3c2f48a6043772efbfd771a6b9965e904cd03556fa07598f0c759` |
+| 16:9 | [Drive folder](https://drive.google.com/drive/folders/19LldycGJHxildCDzBwDanU4fCvRu8R9G) | 3840×2160 | 3:14 | `9224a37f48169f1d07070dab2de8f65b97719ae045390b8bf064441512c47ff2` |
+| 9:16 | [Drive folder](https://drive.google.com/drive/folders/10RfFXUvs2IXb4e3ga_F3d7YQINfxQnxr) | 2160×3840 | 3:14 | `8b5044eca1c3c2f48a6043772efbfd771a6b9965e904cd03556fa07598f0c759` |
 
-Drive filename for both: `TwoWeekProgressReviewMedasDevFix_AkshitJ.mp4`
+Drive filename for both: `TwoWeekProgressReviewMedasDevFix_AkshitJ.mp4` (Drive folder `08-27-2026`)
 
 - **PM review status:** pending
 - **YouTube 4K processing check:** pending upload
