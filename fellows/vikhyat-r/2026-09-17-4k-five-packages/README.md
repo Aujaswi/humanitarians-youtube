@@ -7,8 +7,7 @@ advocate for one.
 11 beats · 2:52 · `@HumanitariansAI` · delivered 3840×2160 and 2160×3840.
 Companion: `2026-09-17-4k-three-workflows`.
 
-Source only — the masters are on Drive, per the GitHub-for-source /
-Drive-for-media rule.
+Source only. The rendered masters are not in this repo.
 
 ## This week's contribution
 
@@ -87,14 +86,6 @@ Microsoft Store placeholder by default); `PYTHONUTF8=1`; `PYTHONIOENCODING=utf-8
 **Gates:** F, L, SHAPE, A, W, B and V all run at default strictness. `ART_QC`
 and `ART_STRICT` were never lowered. GATE V final: 0 blockers, 0 majors.
 
-## Watch and review
-
-- Landscape — 3840×2160 — 2:52 — `hai-4k-five-packages.mp4` — Drive: *pending*
-- Vertical — 2160×3840 — 2:52 — `hai-4k-five-packages-vertical.mp4` — Drive: *pending*
-- SHA-256 for each: *pending*
-- PM review status: pending
-- YouTube 4K processing check: pending upload
-- Professors' publication decision: pending
 
 ## Verification performed
 

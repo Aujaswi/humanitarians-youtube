@@ -3,8 +3,7 @@
 A pitch reel on what part of the fellow-video review loop can be automated and
 what cannot. 12 beats, ~3 min, 16:9, `@HumanitariansAI`. Built 2026-09-04.
 
-Source only — the rendered master is on Drive, per the GitHub-for-source /
-Drive-for-media rule.
+Source only. The rendered master is not in this repo.
 
 ## This week's contribution
 
@@ -74,14 +73,6 @@ This is a genuine reproducibility gap and I would rather record it than let
 someone discover it mid-build. Rebuilding the eight components from `PROMPTS.md`
 is the route back.
 
-## Watch and review
-
-- Landscape — 3840×2160 — `hai-review-pipeline-4K-MASTER.mp4` — Drive link: *pending*
-- SHA-256: *pending*
-- No 9:16 vertical exists for this reel.
-- PM review status: pending
-- YouTube 4K processing check: pending upload
-- Professors' publication decision: pending
 
 ## Notes
 
