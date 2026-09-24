@@ -41,5 +41,4 @@ Subject: Fellowship renewal — Example F. — Brutalist — September 24 to Nov
 
 Please review [my Markdown renewal report](https://github.com/nikbearbrown/humanitarians-youtube/blob/main/fellows/example-f/renewal-requests/2026-09-21-renewal-request.md). It summarizes the work, each week’s hours, direct evidence, and outstanding items. The requested continuation is September 24 to November 23.
 
-In real use, email hr@humanitarians.ai before expiration, Monday–Wednesday during business hours. Do not send this fictional example as an actual request.
-
+In real use, email the report link to both hr@humanitarians.ai and bear@humanitarians.ai before expiration, Monday–Wednesday during business hours. Renewals require approval; agreements are not backdated. Do not send this fictional example as an actual request.
