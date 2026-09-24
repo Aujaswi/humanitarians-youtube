@@ -10,7 +10,7 @@ Humanitarians AI fellow. Weekly STEM explainers for the Lyrical Literacy project
 - **Channel chip:** `@HumanitariansAI`
 - **Builder:** `ai-explainer` on the `claude-hai` brand (Pragmatist register)
 
-Rebuild with [brutalist.art](https://github.com/nikbearbrown/brutalist.art). Do not commit MP4 or MP3 files.
+Rebuild with [brutalist.art](https://github.com/nikbearbrown/brutalist.art). Renders — narration, beat clips and the 4K masters — go to Google Drive, one dated folder per week, and each work folder's README links its own. Anything used to *build* a video (captures, pantry stills, sfx) is committed beside it, per the [fellows README](../README.md).
 
 Masters ship at 1080p by default. For 4K: Manim `-qk -r 3840,2160`, `ART_REMOTION_SCALE=2` on Remotion bookends, then `compile.py --height 2160` (16:9) or `--height 3840` (9:16).
 
@@ -50,6 +50,29 @@ frame (see each reel's `SHOTLIST.md` for what moved and why).
 
 - [What a Spectrogram Shows](./2026-08-21-what-a-spectrogram-shows/)
 - [Sample Rate and the Nyquist Limit](./2026-08-21-sample-rate-and-the-nyquist-limit/)
+
+## Lyrical Literacy tutorial series
+
+My main project work: training videos for new Lyrical Literacy volunteers, who join
+with no background in music production, image generation or AI tools. Every screen is
+rebuilt from my own captures rather than recorded. 16:9, 4K.
+
+**Suno** — built 2026-08-29 → 2026-08-31, reported in the week of 2026-09-04
+
+- [Suno interface research and series plan](./2026-09-04-suno-interface-research/)
+- [Suno, Part One — Your First Song](./2026-09-04-suno-part-1-your-first-song/)
+- [Suno, Part Two — The Advanced Tab](./2026-09-04-suno-part-2-the-advanced-tab/)
+- [Suno, Part Three — Voices, Remixes and Downloads](./2026-09-04-suno-part-3-voices-remixes-and-downloads/)
+
+**Midjourney** — built 2026-09-06 → 2026-09-09, reported in the week of 2026-09-11
+
+- [Midjourney interface research and series plan](./2026-09-11-midjourney-interface-research/)
+- [Midjourney, Part One — Your First Image](./2026-09-11-midjourney-part-1-your-first-image/)
+- [Midjourney, Part Two — Writing the Prompt](./2026-09-11-midjourney-part-2-writing-the-prompt/)
+- [Midjourney, Part Three — What to Do With One You Like](./2026-09-11-midjourney-part-3-what-to-do-with-one-you-like/)
+- [Midjourney, Part Four — The Settings Panel](./2026-09-11-midjourney-part-4-the-settings-panel/)
+- [Midjourney, Part Five — Getting the Same Look Twice](./2026-09-11-midjourney-part-5-getting-the-same-look-twice/)
+- [Midjourney, Part Six — The Editor, and Where Your Work Lives](./2026-09-11-midjourney-part-6-the-editor-and-where-your-work-lives/)
 
 ## Frictional log
 

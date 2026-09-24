@@ -11,7 +11,7 @@ the other is
 | **Format** | 16:9 and 9:16, 4K (3840×2160 / 2160×3840), 30 fps |
 | **Voice** | Kokoro `af_bella` — local, free, no API |
 | **Beats** | 7 · 4 purpose-built scenes · 3 chassis/library · **no slates** |
-| **Presenter** | Rohan Vijaykumar |
+| **Presenter** | Rohan V. |
 | **Channel** | @HumanitariansAI |
 | **Built with** | [brutalist.art](https://github.com/nikbearbrown/brutalist.art) |
 | **Status** | Built and QC'd · **not published** |
@@ -121,7 +121,7 @@ why is in [SHOTLIST.md](./SHOTLIST.md#916).
 | `qc-sheet-16x9.png`, `qc-sheet-9x16.png` | contact sheets, both orientations |
 
 The two 4K masters are **not** in git — they are in
-[Google Drive](https://drive.google.com/drive/folders/1UBpIYX_NBcEpMebfTLbJYtmN7WYwZ3Kf)
+[Google Drive](https://drive.google.com/drive/folders/1B5jcU0Cg2OAyYncwYzVYQklvRqUus5bA)
 under `2026-09-18/`. Only the docs and the build contract are committed.
 
 ## Rebuilding
