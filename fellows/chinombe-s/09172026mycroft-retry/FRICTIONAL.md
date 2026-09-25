@@ -2,12 +2,10 @@
 
 ## 2026-09-17 — one retry, and the first full run
 
-- **Video (progress):** https://youtu.be/PASTE_ID
+- **Video (progress):** 
 - **Drive:** https://drive.google.com/drive/folders/1OopER7YqxoKf_w_qwXM98Jh9C2Yxwm6l?usp=drive_link
+**Evidence of commit:** https://github.com/nikbearbrown/mycroft/commit/d2355422cf45a7951881cc4547a2b90a5e266678
 
-> Written retrospectively on 2026-09-24 from `logs/RUN_LOG.md`, `FINDINGS.md`
-> section 7, and the three run logs and results files under
-> `logs/gateway/runs/` and `bench/results/`.
 
 **What I was working on.** The retry rule  when a free check fails, try once on
 a stronger model  and then the first live sweep of all 24 fixtures through the
