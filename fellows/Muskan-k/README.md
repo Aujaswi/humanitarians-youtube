@@ -1,7 +1,7 @@
 # Muskan K.
 
 **Role:** AI Engineer  
-**Project:** _to be filled in_  
+**Project:** Mycroft  
 **GitHub:** [@MuskanKhandelwal](https://github.com/MuskanKhandelwal)
 
 ## What's in this folder
@@ -18,6 +18,11 @@
 - `2026-08-28-open-vs-closed/` — open vs closed (2026-08-28)
 - `2026-08-28-vendor-intel-guardrails/` — vendor intel guardrails (2026-08-28)
 - `2026-09-04-multimodal-ai/` — multimodal ai (2026-09-04)
+- `2026-09-11-vendor-intel-update/` - vendor intel update (2026-09-11)
+- `2026-09-11-agent-harness/` - agent harness (2026-09-11)
+- `2026-09-18-ai-compute/` - agent harness (2026-09-18)
+- `2026-09-25-system-one/` - system one (2026-09-25)
+
 
 ## Frictional log
 
