@@ -1,14 +1,20 @@
 # Aujaswi A.
 
-**Role:** Research Analyst  
-**Project:** _to be filled in_  
-**GitHub:** [@AUJASWI](https://github.com/AUJASWI)
+**Role:** AI Product Analyst
+**Project:** Medhavy
+**Group:** Medhavy team
+**GitHub:** [@Aujaswi](https://github.com/Aujaswi)
+**Voice:** af_bella (Kokoro)
+**Last updated:** 2026-09-24
 
 ## What's in this folder
 
-No work in this folder yet. Each piece of work gets its own dated,
-lowercase-kebab subfolder — `YYYY-MM-DD-short-slug/` — holding its
-`beat_sheet.json`, README, sources and build assets.
+No work has been pushed to this folder yet. Video production (STEM/AI topic
+videos and Project Medhavy progress videos, per the fellows video-essay
+guidelines published 2026-09-24) is in progress on a separate machine.
+Dated work subfolders — `YYYY-MM-DD-short-slug/`, each holding its
+`beat_sheet.json`, README, sources and build assets — will be added here as
+videos are completed and verified.
 
 ## Frictional log
 
