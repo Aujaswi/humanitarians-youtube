@@ -2,11 +2,10 @@
 
 ## 2026-09-10 — task policy, the router, and a frozen test set
 
-- **Video (progress):** https://youtu.be/PASTE_ID
+- **Video (progress):** https://www.youtube.com/watch?v=MiWZyDMCR50
 - **Drive:** https://drive.google.com/drive/folders/1xOoXuHBwvOA8mb8O3YAUd3hiCSPezVJB?usp=drive_link
+- **Evidence of commit:** https://github.com/nikbearbrown/mycroft/commit/68bbeb5d1ee5b7e53bd283d17dc516024a2b5589
 
-> Written retrospectively on 2026-09-24 from `logs/RUN_LOG.md`, `FINDINGS.md`
-> section 6, `policy.json`, `bench/manifest.json` and the labelling passes.
 
 **What I was working on.** Locking down the six kinds of task Mycroft actually
 does, building the router that sends each one to a tier, and hand-labelling a

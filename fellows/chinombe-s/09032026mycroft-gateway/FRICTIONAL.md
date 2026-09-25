@@ -2,12 +2,12 @@
 
 ## 2026-09-10 — connecting the three model tiers
 
-- **Video (progress):** https://youtu.be/PASTE_ID
+- **Video (progress):** 
 - **Drive:** https://drive.google.com/drive/folders/1pHXg01GKXl1-iEPKqCr3O4BUJwsPSCBk?usp=drive_link
 
-> Written retrospectively on 2026-09-24 from `logs/RUN_LOG.md`,
-> `FINDINGS.md` section 5, commit `f8c80ee` and the six rows in
-> `logs/gateway/first-live-call.jsonl`. Calls 1–3 actually ran on 2026-09-02.
+- **Evidence of commit:** https://github.com/nikbearbrown/mycroft/commit/f8c80ee081c0cf1411b0dcc0592a06ec4d79a384
+
+
 
 **What I was working on.** One piece of code that talks to all three model
 sizes the same way, so cost and latency get recorded without the caller having
