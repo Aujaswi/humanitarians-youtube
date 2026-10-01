@@ -50,7 +50,7 @@ This work applies MS in Business Analytics coursework directly: market and fundi
 - The Electron Microscopy textbook tutorial video and the investor-facing cancer textbook video are still in production and not yet complete as of this request.
 - The Indiegogo campaign's funding goal and timeline remain an open decision with the Medhavy team, unresolved since Week 4.
 - **PR #153 (covering all 24 videos) merged into `nikbearbrown/humanitarians-youtube:main` on September 29, 2026.** The Frictional-log links in the evidence index below point to that canonical repo, pinned to the merge commit `0b7ffe0c`.
-- **PR #199** (adding "Published to YouTube" links for the Week 10-12 progress videos) is open and awaiting review as of this writing — not yet merged. Separately, per Humanitarians AI's video pre-approval requirement, these three videos have not yet been sent to a PM for pre-approval as of this request.
+- **PR #199** (adding "Published to YouTube" links for the Week 10-12 progress videos) is open and awaiting review as of this writing — not yet merged. All 24 videos were sent to PMs for pre-approval; PMs have uploaded the Week 10-12 progress videos to YouTube so far (links in the evidence index below). The remaining videos are still in the PM review/upload pipeline as of this request.
 - Otherwise: None known at this time.
 
 ---
@@ -74,7 +74,7 @@ This work applies MS in Business Analytics coursework directly: market and fundi
 
 *Week 13 (Sep 23–29) is in progress and will be added once complete, before the current agreement ends September 30.*
 
-*Note: PR #153 merged September 29, 2026 — the log links above point to the canonical `nikbearbrown/humanitarians-youtube` repo, pinned to the merge commit `0b7ffe0c`. The three Week 10-12 progress-video READMEs also now link their YouTube uploads directly (PR #199, open); PM pre-approval of those three videos has not yet been separately requested or confirmed as of this writing.*
+*Note: PR #153 merged September 29, 2026 — the log links above point to the canonical `nikbearbrown/humanitarians-youtube` repo, pinned to the merge commit `0b7ffe0c`. All 24 videos were sent to PMs for pre-approval; the three Week 10-12 progress-video READMEs now link the YouTube uploads PMs have posted so far (PR #199, open). The remaining videos are still in the PM review/upload pipeline.*
 
 ---
 
